@@ -6,4 +6,6 @@ this is a game about a restless ninja made by students of the University of Sain
 # C# programer -
 # GUI programer -
 # Web Site programer - 
+
+# P/S
 if you download say thanks programer , good luck.
