@@ -2,7 +2,7 @@
 # About
 this is a game about a restless ninja made by students of the University of Saints Cyril and Methodius. 
 # Duties
-# Group Leader - 
+# Group Leader - Dominik Šmidák 
 # C# programer - Erik Bordáč
 # GUI programer -
 # Web Site programer - 
