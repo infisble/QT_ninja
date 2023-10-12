@@ -16,6 +16,7 @@ public class GameLogicScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		DialogTextBox.SetActive(false);
         playerScript = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
     }
 
@@ -30,6 +31,7 @@ public class GameLogicScript : MonoBehaviour
 
 	public void StartDialog(string question, string[] values, int correctAnswerIdx = 0)
 	{
+		/// This method is called when you want to display DialogText
 		SetDialogTextOptions(question,values,correctAnswerIdx);
 		SetTalkingState(true);
 	}
