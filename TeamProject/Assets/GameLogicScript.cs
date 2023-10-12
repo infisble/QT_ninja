@@ -68,10 +68,11 @@ public class GameLogicScript : MonoBehaviour
 			if (i == 0)
 			{
 				text.text = question;
+				i++;
 			} else
 			{
 				var x = text.GetComponent<Text>();
-				x.text = values[i++];
+				x.text = values[(i++) - 1];
 			}
 		}
 	}
