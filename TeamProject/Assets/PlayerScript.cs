@@ -12,14 +12,29 @@ public class PlayerScript : MonoBehaviour
 	//Grounded Vars
 	bool isGrounded = true;
 
-	public bool CanMove = true;
+	//public bool CanMove = true;
+	private bool _canMove = true;
+
+	public bool CanMove
+	{
+		get { return _canMove; }
+		set 
+		{ 
+			_canMove = value;
+			if (!value)
+			{
+				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			}
+		}
+	}
+
 
 	void Update()
 	{
 		if (CanMove)
 		{
 			//Jumping
-			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W))
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
 			{
 				if (isGrounded)
 				{
