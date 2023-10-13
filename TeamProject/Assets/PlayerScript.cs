@@ -59,8 +59,15 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 	//Check if Grounded
-	void OnTriggerEnter2D()
+	//void OnTriggerEnter2D()
+	//{
+	//	isGrounded = true;
+	//}
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		isGrounded = true;
+		if (collision.tag == "FloorCollider")
+		{
+			isGrounded = true;
+		}
 	}
 }
