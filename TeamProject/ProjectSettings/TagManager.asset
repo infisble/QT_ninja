@@ -7,6 +7,7 @@ TagManager:
   - DialogTextBox
   - DialogTextBox.QuestionText
   - DialogTextBox.ValueText
+  - FloorCollider
   layers:
   - Default
   - TransparentFX
