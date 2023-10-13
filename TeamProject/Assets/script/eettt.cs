@@ -15,9 +15,6 @@ public class eettt : MonoBehaviour
 
     private void Start()
     {
-        // Load the last selected sprite from PlayerPrefs when the game starts.
-        int savedSpriteIndex = PlayerPrefs.GetInt(spriteKey); // 0 is the default value if the key doesn't exist.
-
         // Set the initial sprite based on the saved index.
 		img.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString(spriteKey));
 	}
