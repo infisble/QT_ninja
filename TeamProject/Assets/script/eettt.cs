@@ -10,7 +10,7 @@ public class eettt : MonoBehaviour
     [SerializeField] private Sprite sprite1;
     [SerializeField] private Sprite sprite2;
     [SerializeField] private Sprite sprite3;
-[SerializeField] private SpriteRenderer spriterend;
+	[SerializeField] private SpriteRenderer spriterend;
     private string spriteKey = "SelectedSprite";
 
     private void Start()
@@ -19,44 +19,34 @@ public class eettt : MonoBehaviour
         int savedSpriteIndex = PlayerPrefs.GetInt(spriteKey); // 0 is the default value if the key doesn't exist.
 
         // Set the initial sprite based on the saved index.
-        SetSprite(savedSpriteIndex);
-    }
+		img.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString(spriteKey));
+	}
 
     public void ChangeSpriteBlue()
     {
-        SetSprite(0); // 0 corresponds to sprite1
+        SetSprite("pngegg (4)"); // 0 corresponds to sprite1
     }
 
     public void ChangeSpriteRed()
     {
-        SetSprite(1); // 1 corresponds to sprite2
+        SetSprite("pngegg (3)"); // 1 corresponds to sprite2
     }
 
     public void ChangeSpriteGreen()
     {
-        SetSprite(2); // 2 corresponds to sprite3
+        SetSprite("ground"); // 2 corresponds to sprite3
     }
 
-    private void SetSprite(int spriteIndex)
+    private void SetSprite(string path)
     {
-        switch (spriteIndex)
-        {
-            case 0:
-                img.sprite = sprite1;
-                spriterend.sprite = sprite1;
-                break;
-            case 1:
-                img.sprite = sprite2;
-                 spriterend.sprite = sprite2;
-                break;
-            case 2:
-                img.sprite = sprite3;
-                spriterend.sprite = sprite3;
-                break;
-        }
+		//string spritePath = "";		// will never be empty, initializing to "" because otherwise you get uninitialized error
+		string spritePath = path;
+		
+		// set preview sprite
+		img.sprite = Resources.Load<Sprite>(path);
 
-        // Save the selected sprite index to PlayerPrefs.
-        PlayerPrefs.SetInt(spriteKey, spriteIndex);
+		// Save path to PlayerPrefs
+		PlayerPrefs.SetString(spriteKey, spritePath);
         PlayerPrefs.Save(); // This line is optional, but it's a good practice to ensure PlayerPrefs data is saved immediately.
     }
 }

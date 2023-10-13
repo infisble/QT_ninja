@@ -28,6 +28,11 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 
+	private void Start()
+	{
+		var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite"));
+	}
 
 	void Update()
 	{
