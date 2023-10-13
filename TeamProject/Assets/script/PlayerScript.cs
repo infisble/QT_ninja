@@ -1,0 +1,66 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerScript : MonoBehaviour
+{
+	//Movement
+	public float speed;
+	public float jump;
+	float moveVelocity;
+
+	//Grounded Vars
+	bool isGrounded = true;
+
+	//public bool CanMove = true;
+	private bool _canMove = true;
+
+	public bool CanMove
+	{
+		get { return _canMove; }
+		set 
+		{ 
+			_canMove = value;
+			if (!value)
+			{
+				GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			}
+		}
+	}
+
+
+	void Update()
+	{
+		if (CanMove)
+		{
+			//Jumping
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+			{
+				if (isGrounded)
+				{
+					GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
+					isGrounded = false;
+				}
+			}
+
+			moveVelocity = 0;
+
+			//Left Right Movement
+			if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+			{
+				moveVelocity = -speed;
+			}
+			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+			{
+				moveVelocity = speed;
+			}
+
+			GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
+		}
+	}
+	//Check if Grounded
+	void OnTriggerEnter2D()
+	{
+		isGrounded = true;
+	}
+}
