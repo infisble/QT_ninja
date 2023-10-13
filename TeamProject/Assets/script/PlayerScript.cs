@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
 	private void Start()
 	{
 		var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite"));
+		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite","pngegg (3)"));
 	}
 
 	void Update()
@@ -64,8 +64,8 @@ public class PlayerScript : MonoBehaviour
 		}
 	}
 	//Check if Grounded
-	void OnTriggerEnter2D()
+	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		isGrounded = true;
+		if (collision.tag == "FloorCollider") isGrounded = true;
 	}
 }
