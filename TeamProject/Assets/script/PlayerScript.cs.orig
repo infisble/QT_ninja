@@ -30,6 +30,7 @@ public class PlayerScript : MonoBehaviour
 
 	private void Start()
 	{
+<<<<<<< HEAD:TeamProject/Assets/script/PlayerScript.cs
 		var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite"));
 	}
