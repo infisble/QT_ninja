@@ -11,7 +11,7 @@ public class NPC_Script : MonoBehaviour
 	public int CorrectAnswer;
 
 	public GameObject TalkButtonHint;
-	public GameLogicScript GameLogicScript;
+	public DialogManager GameLogicScript;
 
 	private bool _isTalkable;
 

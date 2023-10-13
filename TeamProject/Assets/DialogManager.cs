@@ -1,11 +1,8 @@
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameLogicScript : MonoBehaviour
+public class DialogManager : MonoBehaviour
 {
 	public PlayerScript playerScript;
 	public GameObject DialogTextBox;
