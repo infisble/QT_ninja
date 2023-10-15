@@ -1,137 +1,65 @@
 {
-	"ps":[
-                {
-                    "question": "Otazka 1",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 2",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 3",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                },
-                {
-                    "question": "Otazka 4",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 5",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                }
-            ],
-            "prog":[
-                {
-                    "question": "Otazka 1",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 2",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                },
-                {
-                    "question": "Otazka 3",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 4",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 5",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                }
-            ],
-            "it":[
-                {
-                    "question": "Otazka 1",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                },
-                {
-                    "question": "Otazka 2",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 3",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                },
-                {
-                    "question": "Otazka 4",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 5",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                }
-            ],
-            "ads":[
-                {
-                    "question": "Otazka 1",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 2",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 3",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 4",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                },
-                {
-                    "question": "Otazka 5",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                }
-            ],
-            "adm":[
-                {
-                    "question": "Otazka 1",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 2",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 3",
-                    "options": ["1", "2", "3"],
-                    "answer": "2"
-                },
-                {
-                    "question": "Otazka 4",
-                    "options": ["1", "2", "3"],
-                    "answer": "1"
-                },
-                {
-                    "question": "Otazka 5",
-                    "options": ["1", "2", "3"],
-                    "answer": "3"
-                }
-            ]
+  "Subjects": [
+    {
+      "Name": "ps",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "1", "2", "3" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "1", "2", "3" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "1", "2", "3" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "1", "2", "3" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "1", "2", "3" ],
+          "answer": "0"
+        }
+      ]
+    },
+    {
+      "Name": "it",
+      "Questions": [
+        {
+          "question": "Otazka 1it",
+          "options": [ "1", "2", "3" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2it",
+          "options": [ "1", "2", "3" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 3it",
+          "options": [ "1", "2", "3" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 4it",
+          "options": [ "1", "2", "3" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 5it",
+          "options": [ "1", "2", "3" ],
+          "answer": "0"
+        }
+      ]
+    }
+
+  ]
 }
