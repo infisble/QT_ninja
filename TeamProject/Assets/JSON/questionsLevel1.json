@@ -64,59 +64,59 @@
       "Name": "prog",
       "Questions": [
         {
-          "question": "Otazka 1prog",
-          "options": [ "1", "2", "3" ],
+          "question": "Ktorá funkcia sa najčastejšie používa na výpis hodnôt a textu?",
+          "options": [ "printf()", "write()", "output()" ],
           "answer": "0"
         },
         {
-          "question": "Otazka 2prog",
-          "options": [ "1", "2", "3" ],
+          "question": "Aký operátor sa používa na porovnanie dvoch hodnôt?",
+          "options": [ "=", "==", "><" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 3prog",
-          "options": [ "1", "2", "3" ],
+          "question": "Aký výraz sa používa pre premennú, aby sa nedala meniť?",
+          "options": [ "constant", "const", "final" ],
+          "answer": "1"
+        },
+        {
+          "question": "Aký výraz sa používa na vrátenie hodnoty z funkcie?",
+          "options": [ "return", "break", "get" ],
+          "answer": "0"
+        },
+        {
+          "question": "S ktorým príkazom ukončujeme cyklus?",
+          "options": [ "stop", "exit", "break" ],
           "answer": "2"
-        },
-        {
-          "question": "Otazka 4prog",
-          "options": [ "1", "2", "3" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 5prog",
-          "options": [ "1", "2", "3" ],
-          "answer": "0"
         }
       ]
     },
     {
-      "Name": "ads",
+      "Name": "pit",
       "Questions": [
         {
-          "question": "Otazka 1ads",
-          "options": [ "1", "2", "3" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2ads",
-          "options": [ "1", "2", "3" ],
+          "question": "Čo znamená skratka PHP?",
+          "options": [ "Personal Hypertext Processor", "PHP: Hypertext Preprocessor", "Private Home Page" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 3ads",
-          "options": [ "1", "2", "3" ],
+          "question": "Akým symbolom začináju všetky premenné v PHP?",
+          "options": [ "&", "!", "$" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 4ads",
-          "options": [ "1", "2", "3" ],
-          "answer": "1"
+          "question": "Ako sa vytvárajú funkcie v PHP?",
+          "options": [ "function myFunction()", "create myFunction()", "new_function myFunction()" ],
+          "answer": "0"
         },
         {
-          "question": "Otazka 5ads",
-          "options": [ "1", "2", "3" ],
+          "question": "Ktorý MySQL príkaz sa používa na výber dát z databázy?",
+          "options": [ "SELECT", "EXTRACT", "GET" ],
           "answer": "0"
+        },
+        {
+          "question": "Ktorý MySQL príkaz sa používa na odstránenie dát z databázy?",
+          "options": [ "REMOVE", "COLLAPSE", "DELETE" ],
+          "answer": "2"
         }
       ]
     },
