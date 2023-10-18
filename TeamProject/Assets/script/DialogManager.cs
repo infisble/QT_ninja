@@ -7,13 +7,17 @@ public class DialogManager : MonoBehaviour
 {
 	public PlayerScript playerScript;
 	public GameObject DialogTextBox;
+	public GameLogicScript GameLogicScript;
 
 	private List<Image> _selectedPointers = new();
 	private List<Text> _possibleAnswers = new();
+	private JsonReader.Question[] _questions;
+	private int currentQuestionIdx;
 	private Text _question;
 
-	private int _selectedIdx = 0;
-	private int _correctIdx;
+	private int _selectedOptionIdx = 0;
+	private int _selectedQuestionIdx = 0;
+	private int _correctOptionIdx;
 
 	private bool _isTalking = false;
 
@@ -30,9 +34,34 @@ public class DialogManager : MonoBehaviour
 	void Update()
     {
 		if (!_isTalking) return;
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
 		{
-			SetTalkingState(false);
+			// correct answer 
+			if (_selectedOptionIdx == _correctOptionIdx)
+			{
+				GameLogicScript.IncrementScore();
+				// check if last question
+				if (_selectedQuestionIdx < _questions.Length - 1)
+				{
+					SelectQuestion(++_selectedQuestionIdx);
+				} else
+				{
+					SetTalkingState(false);
+				}
+			} 
+			// wrong answer
+			else
+			{
+				GameLogicScript.DecrementScore();
+				// check if last question
+				if (_selectedQuestionIdx < _questions.Length - 1)
+				{
+					SelectQuestion(++_selectedQuestionIdx);
+				} else
+				{
+					SetTalkingState(false);
+				}
+			}
 		}
 		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 		{
@@ -44,16 +73,28 @@ public class DialogManager : MonoBehaviour
 		}
     }
 
-	public void StartDialog(string question, string[] values, int correctAnswerIdx = 0)
+	public void StartDialog(JsonReader.Subject subject)
+	{
+		currentQuestionIdx = 0;
+		_questions = subject.Questions;
+		SelectQuestion(currentQuestionIdx);
+	}
+	private void SelectQuestion(int idx)
+	{
+		var question = _questions[idx];
+		_selectedQuestionIdx = idx;
+		ShowQuestion(question.question, question.options, int.Parse(question.answer));
+	}
+
+	private void ShowQuestion(string question, string[] values, int correctAnswerIdx = 0)
 	{
 		/// This method is called when you want to display DialogText
-		_correctIdx = correctAnswerIdx;
-		_selectedIdx = 0;
-		//SetTextVariables();		// ?
-		SetDialogTextOptions(question,values);
+		_correctOptionIdx = correctAnswerIdx;
+		_selectedOptionIdx = 0;
+		SetDialogTextOptions(question, values);
 		SetTalkingState(true);
-		SelectOption(_selectedIdx);
-	} 
+		SelectOption(_selectedOptionIdx);
+	}
 
 	private void SetTextVariables()
 	{
@@ -122,18 +163,18 @@ public class DialogManager : MonoBehaviour
 
 	private void SelectPreviousOption()
 	{
-		if (_selectedIdx == 0)
+		if (_selectedOptionIdx == 0)
 		{
-			_selectedIdx = 2;
+			_selectedOptionIdx = 2;
 		}
-		else --_selectedIdx;
+		else --_selectedOptionIdx;
 
-		SelectOption(_selectedIdx);
+		SelectOption(_selectedOptionIdx);
 	}
 	private void SelectNextOption()
 	{
-		_selectedIdx = ++_selectedIdx % 3;
+		_selectedOptionIdx = ++_selectedOptionIdx % 3;
 
-		SelectOption(_selectedIdx);
+		SelectOption(_selectedOptionIdx);
 	}
 }

@@ -8,6 +8,7 @@ TagManager:
   - DialogTextBox.QuestionText
   - DialogTextBox.ValueText
   - FloorCollider
+  - Score
   layers:
   - Default
   - TransparentFX

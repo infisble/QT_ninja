@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class NPC_Script : MonoBehaviour
 {
-	public string Question;
-	public string PossibleAnswer1;
-	public string PossibleAnswer2;
-	public string PossibleAnswer3;
-	public int CorrectAnswer;
-
+	public string Subject;
 	public GameObject TalkButtonHint;
-	public DialogManager GameLogicScript;
+	public DialogManager DialogManager;
 
 	private bool _isTalkable;
 
@@ -22,16 +17,15 @@ public class NPC_Script : MonoBehaviour
 
 	private void Update()
 	{
+		if (Subject == "")
+		{
+			throw new UnassignedReferenceException("NPC_Script Must have 'Subject' assigned to work properly !");
+		}
+
 		if (_isTalkable && Input.GetKeyDown(KeyCode.E))
 		{
-			GameLogicScript.StartDialog(Question,
-										new string[]
-										{
-											PossibleAnswer1,
-											PossibleAnswer2,
-											PossibleAnswer3,
-										},
-										CorrectAnswer);
+			var x = JsonReader.GetData(Subject);
+			DialogManager.StartDialog(x);
 		}
 	}
 

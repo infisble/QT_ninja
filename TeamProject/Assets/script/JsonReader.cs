@@ -6,35 +6,40 @@ using System.Text;
 public class JsonReader : MonoBehaviour
 {
     [System.Serializable]
-    public class NPC
-    {
-        public string question;
-        public List<string> options;
-        public string answer;
-    }
+	public class SubjectList
+	{
+		public Subject[] Subjects;
+	}
 
     [System.Serializable]
-    public class NPCList
-    {
-        public NPC[] ps;
-        public NPC[] prog;
-        public NPC[] it;
-        public NPC[] ads;
-        public NPC[] adm;
-    }
+	public class Subject
+	{
+		public string Name;
+		public Question[] Questions;
+	}
 
-    private readonly string json = System.IO.File.ReadAllText(@"../TeamProject/Assets/JSON/questionsLevel1.json");
-    public NPCList myNPCList = new NPCList();
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        myNPCList = JsonUtility.FromJson<NPCList>(json);
-    }
+    [System.Serializable]
+	public class Question
+	{
+		public string question;
+		public string[] options;
+		public string answer;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public static Subject GetData(string subject)
+	{
+		string json = System.IO.File.ReadAllText(@"../TeamProject/Assets/JSON/questionsLevel1.json");
+		var list = new SubjectList();
+		list = JsonUtility.FromJson<SubjectList>(json);
+		
+		foreach (var subj in list.Subjects)
+		{
+			if (subj.Name == subject)
+			{
+				return subj;
+			}
+		}
+
+		return null;
+	}
 }
