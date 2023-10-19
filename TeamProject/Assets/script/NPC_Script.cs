@@ -7,6 +7,7 @@ public class NPC_Script : MonoBehaviour
 	public string Subject;
 	public GameObject TalkButtonHint;
 	public DialogManager DialogManager;
+	private bool _questionsFinished = false;
 
 	private bool _isTalkable;
 
@@ -22,15 +23,19 @@ public class NPC_Script : MonoBehaviour
 			throw new UnassignedReferenceException("NPC_Script Must have 'Subject' assigned to work properly !");
 		}
 
-		if (_isTalkable && Input.GetKeyDown(KeyCode.E))
+		if (_isTalkable && Input.GetKeyDown(KeyCode.E) && !_questionsFinished)
 		{
 			var x = JsonReader.GetData(Subject);
+			TalkButtonHint.SetActive(false);
 			DialogManager.StartDialog(x);
+			_questionsFinished = true;
 		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+		if (_questionsFinished) return;
+
 		TalkButtonHint.SetActive(true);
 		_isTalkable = true;
 	}
