@@ -34,34 +34,16 @@ public class DialogManager : MonoBehaviour
 	void Update()
     {
 		if (!_isTalking) return;
+
+		// Select answer
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
 		{
 			// correct answer 
-			if (_selectedOptionIdx == _correctOptionIdx)
-			{
-				GameLogicScript.IncrementScore();
-				// check if last question
-				if (_selectedQuestionIdx < _questions.Length - 1)
-				{
-					SelectQuestion(++_selectedQuestionIdx);
-				} else
-				{
-					SetTalkingState(false);
-				}
-			} 
-			// wrong answer
-			else
-			{
-				GameLogicScript.DecrementScore();
-				// check if last question
-				if (_selectedQuestionIdx < _questions.Length - 1)
-				{
-					SelectQuestion(++_selectedQuestionIdx);
-				} else
-				{
-					SetTalkingState(false);
-				}
-			}
+			if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
+
+			// check if last question
+			if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);
+			else SetTalkingState(false);
 		}
 		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 		{
