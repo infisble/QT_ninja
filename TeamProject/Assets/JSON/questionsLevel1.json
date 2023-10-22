@@ -121,32 +121,32 @@
       ]
     },
     {
-      "Name": "adm",
+      "Name": "mat",
       "Questions": [
         {
-          "question": "Otazka 1adm",
-          "options": [ "1", "2", "3" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2adm",
-          "options": [ "1", "2", "3" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 3adm",
-          "options": [ "1", "2", "3" ],
+          "question": "Ktorý matematik navrhol 'imaginárnu jednotku'?",
+          "options": [ "Aristoteles", "Augustus De Morgan", "Rafael Bombelli" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 4adm",
-          "options": [ "1", "2", "3" ],
+          "question": "Ako sa nazýva matica, ak riadky m a stĺpce n sa rovnajú?",
+          "options": [ "nulová", "štvorcová", "obdĺžniková" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 5adm",
-          "options": [ "1", "2", "3" ],
+          "question": "Aká je derivácia funkcie f(x) = 4x² + 2x + 5?",
+          "options": [ "8x + 2 + 5", "18x + 5", "8x + 2" ],
+          "answer": "2"
+        },
+        {
+          "question": "'Per partes' je metóda:",
+          "options": [ "integrovanie", "derivácie", "intgrovania a derivácie" ],
           "answer": "0"
+        },
+        {
+          "question": "Ako je definovaný diskriminant D pre kvadratickú funkciu ax² + bx + c?",
+          "options": [ "2b - 2ac", "b² - 4ac", "4b - ac" ],
+          "answer": "1"
         }
       ]
     }
