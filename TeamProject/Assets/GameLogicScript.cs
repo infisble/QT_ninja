@@ -24,10 +24,7 @@ public class GameLogicScript : MonoBehaviour
 
 	public void IncrementScore()
 	{
-		ScoreText.text = (++Score).ToString();
-	}
-	public void DecrementScore()
-	{
-		ScoreText.text = (--Score).ToString();
+		Score += 4;
+		ScoreText.text = $"{Score}/100";
 	}
 }
