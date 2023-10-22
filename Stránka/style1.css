@@ -28,7 +28,11 @@
   margin-top: 50px;
   font-size: x-large;
 }
-  
+.teamplan{
+  text-align: left;
+  margin-top: 50px;
+  font-size: x-large;
+}
 .one, 
 .three { 
     background-color: #e97451; 
@@ -36,7 +40,7 @@
 
 .section h1 {
     font-size: 65px;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); 
     text-align: center;
 
 }
