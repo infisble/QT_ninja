@@ -6,14 +6,13 @@ using UnityEngine.UI;
 
 public class GameLogicScript : MonoBehaviour
 {
-	public int Score = 0;
+	private int _score = 0;
 	public Text ScoreText;
 
     // Start is called before the first frame update
     void Start()
     {
 		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
-
 	}
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class GameLogicScript : MonoBehaviour
 
 	public void IncrementScore()
 	{
-		Score += 4;
-		ScoreText.text = $"{Score}/100";
+		_score += 4;
+		ScoreText.text = $"{_score}/100";
 	}
 }
