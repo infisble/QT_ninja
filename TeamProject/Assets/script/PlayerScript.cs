@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
 	public float speed;
 	public float jump;
 	float moveVelocity;
-
+    //public VectorValue pos;
 	//Grounded Vars
 	bool isGrounded = true;
 
@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour
 	}
 
 	private void Start()
-	{
+	{//transform.position =pos.initialValue;
 		var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite","pngegg (3)"));
 	}
