@@ -140,12 +140,42 @@
         },
         {
           "question": "'Per partes' je metóda:",
-          "options": [ "integrovanie", "derivácie", "intgrovania a derivácie" ],
+          "options": [ "integrovania", "derivácie", "intgrovania a derivácie" ],
           "answer": "0"
         },
         {
           "question": "Ako je definovaný diskriminant D pre kvadratickú funkciu ax² + bx + c?",
           "options": [ "2b - 2ac", "b² - 4ac", "4b - ac" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "dbs",
+      "Questions": [
+        {
+          "question": "Príkaz ALTER TABLE table_name RENAME, môže byť použitý na:",
+          "options": [ "premenovanie tabuľky", "premenovanie stĺpca", "premenovanie riadka" ],
+          "answer": "0"
+        },
+        {
+          "question": "Ktorý SQL výraz by mal zobraziť cenu v následujúcom formáte: '$00.30'?",
+          "options": [ "SELECT TO_CHAR(price, '$99,900.99') FROM product", "SELECT TO_CHAR(price, '$99,911.99') FROM product", "SELECT TO_NUMBER(price, '$99,900.99') FROM product" ],
+          "answer": "0"
+        },
+        {
+          "question": "Funkcia MERGE spája príkazy:",
+          "options": [ "ALTER a UPDATE", "INSERT a UPDATE", "CREATE a UPDATE" ],
+          "answer": "1"
+        },
+        {
+          "question": "Ktorá funkcia vracia najväčší dátum v danom mesiaci?",
+          "options": [ "HIGHEST_DAY", "FINAL_DAY", "LAST_DAY" ],
+          "answer": "2"
+        },
+        {
+          "question": "Keď spájame tri tabuľky výrazom SELECT, koľko join podmienok je potrebných v klauzule WHERE?",
+          "options": [ "1", "2", "3" ],
           "answer": "1"
         }
       ]
