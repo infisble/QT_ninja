@@ -14,6 +14,7 @@ public class CollectibleScript : MonoBehaviour
     void Start()
     {
 		InteractPopup.SetActive(false);
+		GameLogicScript = GameLogicScript.Instance;
     }
 
     // Update is called once per frame

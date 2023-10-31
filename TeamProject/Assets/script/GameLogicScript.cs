@@ -6,24 +6,40 @@ using UnityEngine.UI;
 
 public class GameLogicScript : MonoBehaviour
 {
+	public static GameLogicScript Instance;
 	private int _score = 0;
 	public Text ScoreText;
 
     // Start is called before the first frame update
+	public GameLogicScript()
+	{
+		Instance = this;
+	}
+
     void Start()
     {
 		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
+		Update();
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 	public void IncrementScore()
 	{
+		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
 		_score += 4;
-		ScoreText.text = $"{_score}/100";
+		Update();
+	}
+
+	public void SceneTransition()
+	{
+		DontDestroyOnLoad(Instance);
+	}
+
+	public void Update()
+	{
+		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
+		if (ScoreText != null)
+		{
+			ScoreText.text = $"{_score}/100";
+		}
 	}
 }

@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour
 {
 	public PlayerScript playerScript;
 	public GameObject DialogTextBox;
-	public GameLogicScript GameLogicScript;
+	private GameLogicScript GameLogicScript;
 
 	private List<Image> _selectedPointers = new();
 	private List<Text> _possibleAnswers = new();
@@ -28,6 +28,7 @@ public class DialogManager : MonoBehaviour
 		SetTextVariables();
 		DialogTextBox.SetActive(false);
         playerScript = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
+		GameLogicScript = GameLogicScript.Instance;
 	}
 
 	// Update is called once per frame

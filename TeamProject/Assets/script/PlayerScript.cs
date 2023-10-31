@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
 	{//transform.position =pos.initialValue;
 		var spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString("SelectedSprite","pngegg (3)"));
+		GameLogicScript.Instance.Update();
 	}
 
 	void Update()

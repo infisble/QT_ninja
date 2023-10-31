@@ -2915,51 +2915,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733632272}
   m_CullTransparentMesh: 1
---- !u!1 &792065758
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 792065760}
-  - component: {fileID: 792065759}
-  m_Layer: 0
-  m_Name: GameLogic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &792065759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792065758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133e75a6e2b67e24fa89ff477968e6e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
---- !u!4 &792065760
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792065758}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6707132, y: -1.42789, z: -9.947883}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799005677
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,7 +3303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 0}
   DialogTextBox: {fileID: 1485866870}
-  GameLogicScript: {fileID: 792065759}
+  GameLogicScript: {fileID: 0}
 --- !u!4 &992237804
 Transform:
   m_ObjectHideFlags: 0
@@ -4481,7 +4436,7 @@ Transform:
   m_Children:
   - {fileID: 2091404749}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485866870
 GameObject:
@@ -5206,7 +5161,7 @@ Transform:
   - {fileID: 1606232055}
   - {fileID: 2146918920}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799876131
 GameObject:
@@ -5550,7 +5505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractPopup: {fileID: 1378426563}
-  GameLogicScript: {fileID: 792065759}
+  GameLogicScript: {fileID: 0}
 --- !u!61 &1827906379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5846,7 +5801,7 @@ Transform:
   - {fileID: 1909842197}
   - {fileID: 67562894}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2052210498
 GameObject:
