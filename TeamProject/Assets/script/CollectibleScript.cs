@@ -6,7 +6,6 @@ using static JsonReader;
 public class CollectibleScript : MonoBehaviour
 {
 	public GameObject InteractPopup;
-	public GameLogicScript GameLogicScript;
 
 	private bool _canInteract;
 
@@ -14,7 +13,6 @@ public class CollectibleScript : MonoBehaviour
     void Start()
     {
 		InteractPopup.SetActive(false);
-		GameLogicScript = GameLogicScript.Instance;
     }
 
     // Update is called once per frame
@@ -23,7 +21,7 @@ public class CollectibleScript : MonoBehaviour
 		if (_canInteract && Input.GetKeyDown(KeyCode.E))
 		{
 			gameObject.SetActive(false);
-			GameLogicScript.IncrementScore();
+			GameLogicScript.Instance.IncrementScore();
 		}
 	}
 

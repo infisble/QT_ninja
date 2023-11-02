@@ -10,7 +10,6 @@ public class GameLogicScript : MonoBehaviour
 	private int _score = 0;
 	public Text ScoreText;
 
-    // Start is called before the first frame update
 	public GameLogicScript()
 	{
 		Instance = this;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-	public PlayerScript playerScript;
+	private PlayerScript playerScript;
 	public GameObject DialogTextBox;
 	private GameLogicScript GameLogicScript;
 
@@ -101,7 +101,6 @@ public class DialogManager : MonoBehaviour
 		{
 			_selectedPointers.Add(answer.GetComponentInChildren<Image>());
 		}
-		Debug.Log(_possibleAnswers.Count);
 	}
 
 	private void SetTalkingState(bool isTalking)
