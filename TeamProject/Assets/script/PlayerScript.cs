@@ -98,4 +98,18 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (collision.tag == "FloorCollider") _isGrounded = true;
 	}
+ private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("a"))
+        {
+            // Уменьшить скорость игрока вдвое
+            speed *= 0.5f;
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("b"))
+        {
+            // Увеличить скорость игрока вдвое
+            speed *= 2f;
+        }
+    }
+
 }
