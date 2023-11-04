@@ -11,6 +11,8 @@ TagManager:
   - Score
   - Ground
   - Destr
+  - a
+  - b
   layers:
   - Default
   - TransparentFX
