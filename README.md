@@ -4,7 +4,7 @@ this is a game about a restless ninja made by students of the University of Sain
 # Duties
 # Group Leader - Dominik Šmidák 
 # C# programer - Erik Bordáč
-# GUI programer -
+# GUI programer - Anton Vovk
 # Web Site programer - 
 
 # P/S
