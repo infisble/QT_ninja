@@ -6,16 +6,21 @@ using UnityEngine.UI;
 
 public class GameLogicScript : MonoBehaviour
 {
-	public static GameLogicScript Instance;
-	private int _score = 0;
-	public Text ScoreText;
+	public static GameLogicScript Instance { get; private set; }
+	private int _score = Instance is null ? 0 : Instance._score;
+	private Text ScoreText;
 
-	public GameLogicScript()
+	private void Awake()
 	{
+		if (Instance != null && Instance != this)
+		{
+			Destroy(this);
+			return;
+		}
 		Instance = this;
 	}
 
-    void Start()
+	void Start()
     {
 		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
 		Update();
