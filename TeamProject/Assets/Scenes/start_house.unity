@@ -1204,6 +1204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133e75a6e2b67e24fa89ff477968e6e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: 0
 --- !u!4 &1341003124
 Transform:
   m_ObjectHideFlags: 0
@@ -1673,7 +1674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1279cc7d40d5bf4e9436fa8edf5806c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SampleScene
+  sceneToLoad: Level1
 --- !u!61 &1814136634
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ TagManager:
   - b
   - CharacterSkin
   - DialogOptions
+  - Elevator
   layers:
   - Default
   - TransparentFX
