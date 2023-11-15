@@ -20,7 +20,9 @@ public class DialogManager : MonoBehaviour
 	private int _correctOptionIdx;
 
 	private bool _isTalking = false;
+	private bool _textOnlyDialog = false;
 
+	public bool LevelAdvancementCheck = false;
 
 	// Start is called before the first frame update
 	void Start()
@@ -35,33 +37,58 @@ public class DialogManager : MonoBehaviour
 	void Update()
     {
 		if (!_isTalking) return;
+		
+		if (!_textOnlyDialog)
+		{
+			// Select answer
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+			{
+				// correct answer 
+				if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
 
-		// Select answer
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+				// check if last question
+				if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);
+				else SetTalkingState(false);
+			}
+			if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+			{
+				SelectPreviousOption();
+			}
+			if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+			{
+				SelectNextOption();
+			}
+		} else
 		{
-			// correct answer 
-			if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
-
-			// check if last question
-			if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);
-			else SetTalkingState(false);
-		}
-		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-		{
-			SelectPreviousOption();
-		}
-		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-		{
-			SelectNextOption();
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+			{
+				SetTalkingState(false);
+				if (LevelAdvancementCheck)
+				{
+					LevelAdvancementCheck = false;
+					GameLogicScript.Instance.AdvanceLevel();
+				}
+			}
 		}
     }
 
 	public void StartDialog(JsonReader.Subject subject)
 	{
+		GameObject.Find("Options").SetActive(true);
+		_textOnlyDialog = false;
 		currentQuestionIdx = 0;
 		_questions = subject.Questions;
 		SelectQuestion(currentQuestionIdx);
 	}
+	
+	public void StartDialog(string text)
+	{
+		_textOnlyDialog = true;
+		_question.text = text;
+		SetTalkingState(true);
+		GameObject.FindWithTag("DialogOptions")?.SetActive(false);
+	}
+
 	private void SelectQuestion(int idx)
 	{
 		var question = _questions[idx];
