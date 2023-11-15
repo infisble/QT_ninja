@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: ps
+  Subject: os
   TalkButtonHint: {fileID: 44320670}
   DialogManager: {fileID: 992237803}
 --- !u!61 &53811881
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: mat
+  Subject: ele
   TalkButtonHint: {fileID: 502629594}
   DialogManager: {fileID: 992237803}
 --- !u!61 &101983154
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: dbs
+  Subject: tzi
   TalkButtonHint: {fileID: 287140082}
   DialogManager: {fileID: 992237803}
 --- !u!61 &353982477
@@ -22700,7 +22700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: it
+  Subject: dbs
   TalkButtonHint: {fileID: 686437958}
   DialogManager: {fileID: 992237803}
 --- !u!1 &1714940899
@@ -22769,7 +22769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: prog
+  Subject: pg
   TalkButtonHint: {fileID: 658758678}
   DialogManager: {fileID: 992237803}
 --- !u!61 &1799876133

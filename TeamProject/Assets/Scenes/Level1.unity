@@ -1415,7 +1415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32f2d8beddae1274fbe9e8c1785c2dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Subject: dbs
+  Subject: pit
   TalkButtonHint: {fileID: 287140082}
   DialogManager: {fileID: 992237803}
 --- !u!61 &353982477

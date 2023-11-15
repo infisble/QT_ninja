@@ -179,6 +179,276 @@
           "answer": "1"
         }
       ]
+    },
+    {
+      "Name": "os",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "pg",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "tzi",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "ele",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "ms",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "ais",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "mt",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "swi",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "Name": "ib",
+      "Questions": [
+        {
+          "question": "Otazka 1",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 2",
+          "options": [ "r", "w", "w" ],
+          "answer": "0"
+        },
+        {
+          "question": "Otazka 3",
+          "options": [ "w", "r", "r" ],
+          "answer": "1"
+        },
+        {
+          "question": "Otazka 4",
+          "options": [ "w", "w", "r" ],
+          "answer": "2"
+        },
+        {
+          "question": "Otazka 5",
+          "options": [ "w", "r", "w" ],
+          "answer": "1"
+        }
+      ]
     }
 
   ]
