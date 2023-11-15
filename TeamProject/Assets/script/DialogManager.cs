@@ -74,7 +74,7 @@ public class DialogManager : MonoBehaviour
 
 	public void StartDialog(JsonReader.Subject subject)
 	{
-		GameObject.Find("Options").SetActive(true);
+		GameObject.Find("Options")?.SetActive(true);
 		_textOnlyDialog = false;
 		currentQuestionIdx = 0;
 		_questions = subject.Questions;
