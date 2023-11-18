@@ -17,20 +17,30 @@ public class NPC_check_points_script : MonoBehaviour
 		if (_isTalkable && Input.GetKeyDown(KeyCode.E))
 		{
 			TalkButtonHint.SetActive(false);
+			int npcsAnswered = GameLogicScript.Instance.CheckNPCS();
+			int score = GameLogicScript.Instance.Score;
 
 			string questionString;
-			if (GameLogicScript.Instance.Score >= 56)
+			if (npcsAnswered < 5)
 			{
-				questionString = $"Máš {GameLogicScript.Instance.Score}/100 bodov. To je dostatok pre postup do ďaľšej úrovne!\n" +
+				questionString = $"Zodpovedal si {GameLogicScript.Instance.CheckNPCS() * 5}/25 otazok. Zatiaľ si získal {score}/100 bodov.\n" +
+					"Dokonči všetky otázky a potom sa vráť!.\n" +
+					"Stlač <medzerník> pre pokračovanie";
+			}
+			else
+			if (score >= 56)
+			{
+				questionString = $"Zodpovedal si všetky otázky. Získal si {score}/100 bodov. To je dostatok pre postup do ďalšej úrovne!\n" +
 								 "Stlač <medzerník> pre postup do ďaľšej úrovne";
+				DialogManager.LevelAdvancementCheck = true;
 			} else
 			{
-				questionString = $"Máš {GameLogicScript.Instance.Score}/100 bodov. To je málo pre postup do ďaľšej úrovne. Budeš to musieť skúsiť znova!\n" +
+				questionString = $"Máš {score}/100 bodov. To je málo pre postup do ďaľšej úrovne. Budeš to musieť skúsiť znova!\n" +
 								 "Stlač <medzerník> pre reštartovanie";
+				DialogManager.LevelAdvancementCheck = true;
 			}
 
 			DialogManager.StartDialog(questionString);
-			DialogManager.LevelAdvancementCheck = true;
 		}
 	}
 

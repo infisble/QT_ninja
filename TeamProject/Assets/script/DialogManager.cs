@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
 	private PlayerScript playerScript;
 	public GameObject DialogTextBox;
 	private GameLogicScript GameLogicScript;
+	private GameObject _options;
 
 	private List<Image> _selectedPointers = new();
 	private List<Text> _possibleAnswers = new();
@@ -31,11 +32,13 @@ public class DialogManager : MonoBehaviour
 		DialogTextBox.SetActive(false);
         playerScript = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
 		GameLogicScript = GameLogicScript.Instance;
+		_options = GameObject.FindWithTag("DialogOptions");
 	}
 
 	// Update is called once per frame
 	void Update()
-    {
+	{
+
 		if (!_isTalking) return;
 		
 		if (!_textOnlyDialog)
@@ -74,7 +77,8 @@ public class DialogManager : MonoBehaviour
 
 	public void StartDialog(JsonReader.Subject subject)
 	{
-		GameObject.Find("Options")?.SetActive(true);
+		if (_options is null) _options = GameObject.FindWithTag("DialogOptions");
+		_options?.SetActive(true);
 		_textOnlyDialog = false;
 		currentQuestionIdx = 0;
 		_questions = subject.Questions;
@@ -86,7 +90,8 @@ public class DialogManager : MonoBehaviour
 		_textOnlyDialog = true;
 		_question.text = text;
 		SetTalkingState(true);
-		GameObject.FindWithTag("DialogOptions")?.SetActive(false);
+		if (_options is null) _options = GameObject.FindWithTag("DialogOptions");
+		_options?.SetActive(false);
 	}
 
 	private void SelectQuestion(int idx)

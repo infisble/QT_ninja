@@ -58,4 +58,19 @@ public class GameLogicScript : MonoBehaviour
 
 		}
 	}
+
+	public int CheckNPCS()
+	{
+		// Checks how many npcs have answered all questions
+
+		GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
+		int _npcsAnswered = 0;
+		
+		foreach (var npc in npcs)
+		{
+			if (npc.GetComponent<NPC_Script>().QuestionsFinished) _npcsAnswered++;
+		}
+
+		return _npcsAnswered;
+	}
 }
