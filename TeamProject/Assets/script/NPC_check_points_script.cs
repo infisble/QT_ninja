@@ -4,6 +4,7 @@ public class NPC_check_points_script : MonoBehaviour
 {
 	public GameObject TalkButtonHint;
 	public DialogManager DialogManager;
+	public bool EnableGreeting;
 
 	private bool _isTalkable;
 
@@ -20,7 +21,15 @@ public class NPC_check_points_script : MonoBehaviour
 			int npcsAnswered = GameLogicScript.Instance.CheckNPCS();
 			int score = GameLogicScript.Instance.Score;
 
+			if (EnableGreeting)
+			{
+				EnableGreeting = false;
+				DialogManager.StartDialog("caw vitam ta");
+				return;
+			}
+			
 			string questionString;
+
 			if (npcsAnswered < 5)
 			{
 				questionString = $"Zodpovedal si {GameLogicScript.Instance.CheckNPCS() * 5}/25 otazok. Zatiaľ si získal {score}/100 bodov.\n" +
