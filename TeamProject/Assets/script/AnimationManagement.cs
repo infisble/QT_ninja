@@ -25,7 +25,10 @@ public class AnimationManagement : MonoBehaviour
     {
         foreach (Animator animator in animators)
         {
-            animator.enabled = true;
+            if (animator != null)
+            {
+                animator.enabled = true;
+            }
         }
     }
 }
