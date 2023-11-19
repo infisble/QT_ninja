@@ -100,13 +100,15 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("a"))
         {
-            // Уменьшить скорость игрока вдвое
-            speed *= 0.5f;
+            
+            speed *= 0.1f;
+			Destroy(collision.gameObject);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("b"))
         {
-            // Увеличить скорость игрока вдвое
-            speed *= 2f;
+           
+            speed *= 20f;
+			Destroy(collision.gameObject);
         }
     }
 
