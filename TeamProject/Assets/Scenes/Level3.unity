@@ -498,6 +498,7 @@ MonoBehaviour:
   Subject: ais
   TalkButtonHint: {fileID: 44320670}
   DialogManager: {fileID: 992237803}
+  QuestionsFinished: 0
 --- !u!61 &53811881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -771,6 +772,7 @@ MonoBehaviour:
   Subject: ib
   TalkButtonHint: {fileID: 502629594}
   DialogManager: {fileID: 992237803}
+  QuestionsFinished: 0
 --- !u!61 &101983154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1850,6 +1852,7 @@ MonoBehaviour:
   Subject: swi
   TalkButtonHint: {fileID: 287140082}
   DialogManager: {fileID: 992237803}
+  QuestionsFinished: 0
 --- !u!61 &353982477
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20872,7 +20875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3acca4790f5b54cab0e790f5b06cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 5
   jump: 5
 --- !u!114 &991107100
 MonoBehaviour:
@@ -23182,6 +23185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
+  EnableGreeting: 0
 --- !u!1 &1708576129
 GameObject:
   m_ObjectHideFlags: 0
@@ -23413,6 +23417,7 @@ MonoBehaviour:
   Subject: ms
   TalkButtonHint: {fileID: 686437958}
   DialogManager: {fileID: 992237803}
+  QuestionsFinished: 0
 --- !u!1 &1714940899
 GameObject:
   m_ObjectHideFlags: 0
@@ -23589,6 +23594,7 @@ MonoBehaviour:
   Subject: mt
   TalkButtonHint: {fileID: 658758678}
   DialogManager: {fileID: 992237803}
+  QuestionsFinished: 0
 --- !u!61 &1799876133
 BoxCollider2D:
   m_ObjectHideFlags: 0
