@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
 	private PlayerScript playerScript;
 	public GameObject DialogTextBox;
 	private GameLogicScript GameLogicScript;
+	private GameObject _options;
 
 	private List<Image> _selectedPointers = new();
 	private List<Text> _possibleAnswers = new();
@@ -20,7 +21,9 @@ public class DialogManager : MonoBehaviour
 	private int _correctOptionIdx;
 
 	private bool _isTalking = false;
+	private bool _textOnlyDialog = false;
 
+	public bool LevelAdvancementCheck = false;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,39 +32,68 @@ public class DialogManager : MonoBehaviour
 		DialogTextBox.SetActive(false);
         playerScript = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
 		GameLogicScript = GameLogicScript.Instance;
+		_options = GameObject.FindWithTag("DialogOptions");
 	}
 
 	// Update is called once per frame
 	void Update()
-    {
+	{
+
 		if (!_isTalking) return;
+		
+		if (!_textOnlyDialog)
+		{
+			// Select answer
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+			{
+				// correct answer 
+				if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
 
-		// Select answer
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+				// check if last question
+				if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);
+				else SetTalkingState(false);
+			}
+			if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+			{
+				SelectPreviousOption();
+			}
+			if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+			{
+				SelectNextOption();
+			}
+		} else
 		{
-			// correct answer 
-			if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
-
-			// check if last question
-			if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);
-			else SetTalkingState(false);
-		}
-		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-		{
-			SelectPreviousOption();
-		}
-		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-		{
-			SelectNextOption();
+			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+			{
+				SetTalkingState(false);
+				if (LevelAdvancementCheck)
+				{
+					LevelAdvancementCheck = false;
+					GameLogicScript.Instance.AdvanceLevel();
+				}
+			}
 		}
     }
 
 	public void StartDialog(JsonReader.Subject subject)
 	{
+		if (_options is null) _options = GameObject.FindWithTag("DialogOptions");
+		_options?.SetActive(true);
+		_textOnlyDialog = false;
 		currentQuestionIdx = 0;
 		_questions = subject.Questions;
 		SelectQuestion(currentQuestionIdx);
 	}
+	
+	public void StartDialog(string text)
+	{
+		_textOnlyDialog = true;
+		_question.text = text;
+		SetTalkingState(true);
+		if (_options is null) _options = GameObject.FindWithTag("DialogOptions");
+		_options?.SetActive(false);
+	}
+
 	private void SelectQuestion(int idx)
 	{
 		var question = _questions[idx];

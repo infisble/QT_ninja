@@ -14,8 +14,9 @@ TagManager:
   - a
   - b
   - CharacterSkin
-  - Coins
-  - coins
+  - DialogOptions
+  - Elevator
+  - NPC
   layers:
   - Default
   - TransparentFX

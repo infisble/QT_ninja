@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		if (collision.tag == "FloorCollider") _isGrounded = true;
 	}
- private void OnCollisionEnter2D(Collision2D collision)
+	private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("a"))
         {
@@ -110,6 +110,19 @@ public class PlayerScript : MonoBehaviour
             speed *= 20f;
 			Destroy(collision.gameObject);
         }
+
+		if(collision.gameObject.tag == "Elevator")
+        {
+			transform.parent = collision.gameObject.transform;
+        }
     }
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Elevator")
+		{
+			transform.parent = null;
+		}
+	}
 
 }
