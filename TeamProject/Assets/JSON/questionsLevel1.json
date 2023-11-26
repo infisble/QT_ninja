@@ -184,29 +184,29 @@
       "Name": "os",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
+          "question": "Pri ktorej fragmentácii je jeden súbor rozmiestnený na veľa miestach pevného disku, ktoré neležia vedľa seba?",
+          "options": [ "Vnútorná fragmentácia", "Vonkajšia fragmentácia", "Defragmentácia" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Koľko tried má verejný rozsah IP adries?",
+          "options": [ "3", "4", "5" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
-          "answer": "1"
+          "question": "Ako sa nazýva proces pre zmenšovanie veľkosti súborov alebo dát?",
+          "options": [ "shrink", "narrow", "squeeze" ],
+          "answer": "0"
+        },
+        {
+          "question": "Na aké štruktúry sa delí Active Directory?",
+          "options": [ "Logická a fyzická", "Fyzická a procesná", "Procesná a logická" ],
+          "answer": "0"
+        },
+        {
+          "question": "Ktorou súčasťou štruktúry AD je 'globálny katalóg'?",
+          "options": [ "Logická", "Fyzická", "Ani jedna" ],
+          "answer": "2"
         }
       ]
     },
