@@ -23,7 +23,7 @@ public class GameLogicScript : MonoBehaviour
 
 	void Start()
     {
-		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
+		ScoreText = GameObject.FindWithTag("Score")?.GetComponent<Text>();
 		Update();
 	}
 
@@ -41,7 +41,7 @@ public class GameLogicScript : MonoBehaviour
 
 	public void Update()
 	{
-		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
+		ScoreText = GameObject.FindWithTag("Score")?.GetComponent<Text>();
 		if (ScoreText != null)
 		{
 			ScoreText.text = $"{Score}/100";
