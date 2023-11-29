@@ -244,28 +244,28 @@
       "Name": "tzi",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
+          "question": "Ako sa nazýva konečná neprázdna množina symbolov?",
+          "options": [ "abeceda", "reťazec", "skupina" ],
           "answer": "0"
         },
         {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
+          "question": "Ktoré z následovných tvrdení o deterministickom konečnom automate 'nie je' pravdivé?",
+          "options": [ "skladá sa zo stavov a prechodov", "viac stavov môže byť označených ako počiatočný stav", "niektoré zo stavov sú označené ako akceptačné" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Ako sa nazýva jazyk L, keď existuje konečný automat, ktorý ho akceptuje?",
+          "options": [ "konečný jazyk", "regulárny jazyk", "akceptačný jazyk" ],
+          "answer": "1"
+        },
+        {
+          "question": "Aký je rozdiel nedeterministického konečného automatu oproti deterministickému konečnému automatu?",
+          "options": [ "nemôže viesť prechod z jedného stavu do samého seba", "z jedného stavu musí viesť práve jeden prechod", "z jedného stavu môže viesť ľubovoľný (aj nulový) počet prechodov označených rovnakým symbolom" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Ako nazveme deterministický konečný automat, ak neexistuje automat, ktorý by s ním bol ekvivalentný a mal by menší počet stavov?",
+          "options": [ "finálny automat", "minimálny automat", "maximálny automat" ],
           "answer": "1"
         }
       ]
@@ -274,29 +274,29 @@
       "Name": "ele",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
+          "question": "Čo skúma elektrotechnika?",
+          "options": [ "slnečnú energiu", "elektrickú energiu", "elektrickú synergiu" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Elektronika sa zaoberá:",
+          "options": [ "skúmaním vzniku signálov v elektrických zariadeniach", "vývojom elektrických zariadení", "generovaním, úpravou a vyhodnocovaním elektrických signálov" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
-          "answer": "1"
+          "question": "Z čoho pozostáva najjednoduchší elektrický obvod?",
+          "options": [ "spotrebič, zdroj napätia a elektrické vodiče", "spotrebič, magnet a elektrické vodiče", "spotrebič, zdroj napätia a kondenzátor" ],
+          "answer": "0"
+        },
+        {
+          "question": "Aké sú základné časti mikroprocesoru?",
+          "options": [ "mikro-procesor, pamäť programu, pamäť dát a periferné obvody", "mikro-procesor, pamäť programu, riadiaca jednotka a regulačné jednotky", "mikro-procesor, pamäť dát, riadiaca jednotka a periferné obvody" ],
+          "answer": "0"
+        },
+        {
+          "question": "Aký je základný rozdiel medzi gyroskopom a akcelerátorom?",
+          "options": [ "gyroskop meria rýchlosť pohybu a akcelerátor rotáciu telesa", "gyroskop meria lineárne zrýchlenie pohybu a akcelerátor uhlovú rýchlosť otáčania", "gyroskop meria uhlovú rýchlosť otáčania a akcelerátor lineárne zrýchlenie pohybu" ],
+          "answer": "2"
         }
       ]
     },
@@ -424,28 +424,28 @@
       "Name": "ib",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
+          "question": "Steganografia je technika, ktorá:",
+          "options": [ "ukrýva informácie v iných dátach", "skracuje dľžku správy", "zefektívňuje využite digitálneho podpisu" ],
           "answer": "0"
         },
         {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Čo je problémom v symetrických systémoch?",
+          "options": [ "dľžka kľúča alebo ak je kľúč prezradený", "distribúcia kľúčov alebo počet kľúčov pri rôznych spojeniach", "všetky z predchádzajúcich" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Bezpečnosť Diffie-Hellmanovho algoritmu je postavená na:",
+          "options": [ "obtiažnosti faktorizácie veľkých čísel", "obtiažnosti odpočúvať prenášané dáta", "obtiažnosti vypočítať diskrétny logaritmus" ],
+          "answer": "2"
+        },
+        {
+          "question": "Ktoré z následovných tvrdení 'nie je' pravdivé?",
+          "options": [ "dľžka vstupu hašovacieho algoritmu musí mať rovnakú dľžku ako jeho výstup", "základná myšlienka hašovacieho algoritmu je 'zomletie', prepojenie všetkých bitov správy", "výstup hašovacieho algoritmu má fixnú dľžku" ],
+          "answer": "0"
+        },
+        {
+          "question": "Digitálny podpis dokumentu rovnakým súkromným kľúčom:",
+          "options": [ "je vždy rovnaký", "môže byť vždy iný", "bude vždy iný, lebo sa vytvára v inom čase" ],
           "answer": "1"
         }
       ]
