@@ -8,18 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Game_Menu.unity
     guid: f67a1887dfcb5c64092d1d9e6d134090
-  - enabled: 0
-    path: Assets/Scenes/change_skin.unity
-    guid: 69459080a0a4b3841a33c8210854f7b0
   - enabled: 1
     path: Assets/Scenes/CharacterCustomization.unity
     guid: 453ce4e4945c11d4085968a2b7f380d0
   - enabled: 1
     path: Assets/Scenes/start_house.unity
     guid: 7bc24e1caf82688439ac73268be23dd9
-  - enabled: 0
-    path: Assets/Scenes/game_lewel_01.unity
-    guid: 8bc37411712b307479835782d69f36ce
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729

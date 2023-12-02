@@ -31,5 +31,7 @@ public class ChangingHair : MonoBehaviour
         {
             index = 0;
         }
+        PlayerPrefs.SetInt("HairIndex", index);
+        PlayerPrefs.Save();
     }
 }

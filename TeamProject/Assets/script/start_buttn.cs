@@ -7,6 +7,8 @@ public class start_buttn : MonoBehaviour
 {
     public void playGame()
     {
+        PlayerPrefs.SetInt("HairIndex", 0);
+        PlayerPrefs.Save();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
