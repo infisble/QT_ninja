@@ -17,6 +17,8 @@ TagManager:
   - DialogOptions
   - Elevator
   - NPC
+  - coins
+  - Coins
   layers:
   - Default
   - TransparentFX
@@ -24,8 +26,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - FogOfWarMain
+  - FogOfWarSecondary
   - 
   - 
   - 
@@ -56,4 +58,7 @@ TagManager:
     locked: 0
   - name: New Layer 1
     uniqueID: 2650941027
+    locked: 0
+  - name: FogOfWar
+    uniqueID: 2298812727
     locked: 0
