@@ -8,8 +8,13 @@ using UnityEngine.UI;
 public class GameLogicScript : MonoBehaviour
 {
 	public static GameLogicScript Instance { get; private set; }
+
+    [System.NonSerialized]
 	public int Score = Instance is null ? 0 : Instance.Score;
-	private Text ScoreText;
+
+    public int SetScoreDebugOnly = -1;
+
+    private Text ScoreText;
 
 	private void Awake()
 	{
@@ -27,10 +32,11 @@ public class GameLogicScript : MonoBehaviour
 		Update();
 	}
 
-	public void IncrementScore()
+	public void IncrementScore(int val)
 	{
+
 		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
-		Score += 2;
+		Score += val;
 		Update();
 	}
 
@@ -41,6 +47,13 @@ public class GameLogicScript : MonoBehaviour
 
 	public void Update()
 	{
+        // DEBUG
+        if (SetScoreDebugOnly != -1)
+        {
+            Score = SetScoreDebugOnly;
+            SetScoreDebugOnly = -1;
+        }
+
 		ScoreText = GameObject.FindWithTag("Score")?.GetComponent<Text>();
 		if (ScoreText != null)
 		{
@@ -55,6 +68,7 @@ public class GameLogicScript : MonoBehaviour
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		} else
 		{
+            Score = 0;
             if (gameObject.scene.name == "Level2")
             {
 			    SceneManager.LoadScene("Level3");

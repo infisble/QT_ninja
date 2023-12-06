@@ -11,7 +11,7 @@ public class BonusBookScript : MonoBehaviour
     {
         if (_isPickable && Input.GetKeyDown(KeyCode.E))
         {
-            GameLogicScript.Instance.IncrementScore();
+            GameLogicScript.Instance.IncrementScore(2);
             gameObject.SetActive(false);
         }
     }

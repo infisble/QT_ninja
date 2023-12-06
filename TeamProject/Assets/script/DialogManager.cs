@@ -47,7 +47,7 @@ public class DialogManager : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
 			{
 				// correct answer 
-				if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore();
+				if (_selectedOptionIdx == _correctOptionIdx) GameLogicScript.IncrementScore(4);
 
 				// check if last question
 				if (_selectedQuestionIdx < _questions.Length - 1) SelectQuestion(++_selectedQuestionIdx);

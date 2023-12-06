@@ -21,7 +21,7 @@ public class CollectibleScript : MonoBehaviour
 		if (_canInteract && Input.GetKeyDown(KeyCode.E))
 		{
 			gameObject.SetActive(false);
-			GameLogicScript.Instance.IncrementScore();
+			GameLogicScript.Instance.IncrementScore(2);
 		}
 	}
 
