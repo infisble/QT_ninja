@@ -30,7 +30,7 @@ public class GameLogicScript : MonoBehaviour
 	public void IncrementScore()
 	{
 		ScoreText = GameObject.FindWithTag("Score").GetComponent<Text>();
-		Score += 4;
+		Score += 2;
 		Update();
 	}
 
