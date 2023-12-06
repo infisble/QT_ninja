@@ -44975,7 +44975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
-  EnableGreeting: 0
+  EnableGreeting: 1
+  GreetingText: uvitanie lvl1
 --- !u!1 &1695235500
 GameObject:
   m_ObjectHideFlags: 0

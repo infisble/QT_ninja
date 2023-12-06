@@ -6,6 +6,8 @@ public class NPC_check_points_script : MonoBehaviour
 	public DialogManager DialogManager;
 	public bool EnableGreeting;
 
+    public string GreetingText;
+
 	private bool _isTalkable;
 
 	private void Start()
@@ -24,7 +26,7 @@ public class NPC_check_points_script : MonoBehaviour
 			if (EnableGreeting)
 			{
 				EnableGreeting = false;
-				DialogManager.StartDialog("caw vitam ta");
+				DialogManager.StartDialog(GreetingText);
 				return;
 			}
 			

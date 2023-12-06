@@ -55,6 +55,10 @@ public class GameLogicScript : MonoBehaviour
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 		} else
 		{
+            if (gameObject.scene.name == "Level2")
+            {
+			    SceneManager.LoadScene("Level3");
+            } else
 			SceneManager.LoadScene("Level2");
 		}
 	}

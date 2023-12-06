@@ -47422,7 +47422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
-  EnableGreeting: 0
+  EnableGreeting: 1
+  GreetingText: uvitanie lvl2
 --- !u!1 &1710933339
 GameObject:
   m_ObjectHideFlags: 0
@@ -48040,7 +48041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 2135882229}
-  SceneName: minigame
+  SceneName: Minigame1
 --- !u!61 &1868385141
 BoxCollider2D:
   m_ObjectHideFlags: 0
