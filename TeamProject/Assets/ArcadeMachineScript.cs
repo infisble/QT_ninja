@@ -23,6 +23,8 @@ public class ArcadeMachineScript : MonoBehaviour
     {
         if (_isTalkable && Input.GetKeyDown(KeyCode.E) && !_isFinished && CanBeInteracted)
         {
+            if (gameObject.scene.name == "Level1") PlayerPrefs.SetInt("Level1", GameLogicScript.Instance.Score);
+            if (gameObject.scene.name == "Level2") PlayerPrefs.SetInt("Level2", GameLogicScript.Instance.Score);
             SceneManager.LoadScene(SceneName);
         }
     }
