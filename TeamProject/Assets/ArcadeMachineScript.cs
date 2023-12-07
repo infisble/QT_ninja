@@ -25,6 +25,8 @@ public class ArcadeMachineScript : MonoBehaviour
         {
             if (gameObject.scene.name == "Level1") PlayerPrefs.SetInt("Level1", GameLogicScript.Instance.Score);
             if (gameObject.scene.name == "Level2") PlayerPrefs.SetInt("Level2", GameLogicScript.Instance.Score);
+
+            GameLogicScript.Instance.Score = 0;
             SceneManager.LoadScene(SceneName);
         }
     }

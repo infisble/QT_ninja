@@ -53,7 +53,6 @@ public class NPC_check_points_script : MonoBehaviour
                     var machine = GameObject.FindGameObjectWithTag("ArcadeMachine");
                     if (machine is not null)
                     {
-                        GameLogicScript.Instance.Score = 0;
                         machine.GetComponent<ArcadeMachineScript>().CanBeInteracted = true;
                     }
                 }
