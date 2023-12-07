@@ -19,6 +19,7 @@ TagManager:
   - NPC
   - coins
   - Coins
+  - ArcadeMachine
   layers:
   - Default
   - TransparentFX

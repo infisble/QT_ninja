@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPC_check_points_script : MonoBehaviour
 {
@@ -41,14 +42,27 @@ public class NPC_check_points_script : MonoBehaviour
 			else
 			if (score >= 56)
 			{
-				questionString = $"Zodpovedal si všetky otázky. Získal si {score}/100 bodov. To je dostatok pre postup do ďalšej úrovne!\n" +
-								 "Stlač <medzerník> pre postup do ďaľšej úrovne";
-				DialogManager.LevelAdvancementCheck = true;
-			} else
+                if (gameObject.scene.name == "Level3")
+                {
+                    // Succesfully finished last level
+                    questionString = "Gratulujem dokoncil si hru.";
+                } else
+                {
+                    questionString = $"Zodpovedal si všetky otázky. Získal si {score}/100 bodov. To je dostatok pre postup do ďalšej úrovne!\n" +
+                                    "Pre postup do ďalšej úrovne si zahraj automat.";
+                    var machine = GameObject.FindGameObjectWithTag("ArcadeMachine");
+                    if (machine is not null)
+                    {
+                        GameLogicScript.Instance.Score = 0;
+                        machine.GetComponent<ArcadeMachineScript>().CanBeInteracted = true;
+                    }
+                }
+
+            }
+            else
 			{
 				questionString = $"Máš {score}/100 bodov. To je málo pre postup do ďaľšej úrovne. Budeš to musieť skúsiť znova!\n" +
 								 "Stlač <medzerník> pre reštartovanie";
-				DialogManager.LevelAdvancementCheck = true;
 			}
 
 			DialogManager.StartDialog(questionString);

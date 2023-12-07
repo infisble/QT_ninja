@@ -35,29 +35,29 @@ public class PlayerScript : MonoBehaviour
 		//
 		GameObject copy = null;
 		GameObject character = GameObject.FindWithTag("CharacterSkin");
+    
+        if (character is not null)
+        {
+            copy = Instantiate(character);
+            copy.name = "CharacterM";
 
-		if (character is not null)
-		{
-			copy = Instantiate(character);
-			copy.name = "CharacterM";
-
-			// make root node so DontDestroyOnLoad() works properly
-			copy.transform.SetParent(null, true);
-			character.transform.SetParent(this.transform);
-			
-			// set proper scale and position
-			character.transform.localScale = Vector3.one;
-			character.transform.position = this.transform.position;
-			
-			// make copy of character to be used in next scene
-			copy.transform.localScale = Vector3.zero;
-			DontDestroyOnLoad(copy);
-		} 
-		// Skin is not loaded properly, select default skin
-		else
-		{
-			GetComponent<SpriteRenderer>().enabled = true;
-		}
+            // make root node so DontDestroyOnLoad() works properly
+            copy.transform.SetParent(null, true);
+            character.transform.SetParent(this.transform);
+            
+            // set proper scale and position
+            character.transform.localScale = Vector3.one;
+            character.transform.position = this.transform.position;
+            
+            // make copy of character to be used in next scene
+            copy.transform.localScale = Vector3.zero;
+            DontDestroyOnLoad(copy);
+        } 
+        // Skin is not loaded properly, select default skin
+        else
+        {
+            GetComponent<SpriteRenderer>().enabled = true;
+        }
 
 		GameLogicScript.Instance.Update();
 	}

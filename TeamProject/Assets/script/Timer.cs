@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Timer : MonoBehaviour
         else if(remainingTime < 0)
         {
             remainingTime = 0;
-            //Funkcia na prepnutie sceny
+            SceneManager.LoadScene("Level2");
             timerText.color = Color.red;
         }
         int minutes = Mathf.FloorToInt(remainingTime / 60);

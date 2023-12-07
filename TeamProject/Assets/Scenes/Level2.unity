@@ -47401,7 +47401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687162917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.75, y: -2.7, z: 0}
+  m_LocalPosition: {x: -16.04, y: -2.7, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48045,7 +48045,7 @@ GameObject:
   - component: {fileID: 1868385140}
   m_Layer: 0
   m_Name: ArcadeMachine
-  m_TagString: Untagged
+  m_TagString: ArcadeMachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48063,7 +48063,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 2135882229}
-  SceneName: Minigame1
+  SceneName: minigame
+  CanBeInteracted: 0
 --- !u!61 &1868385141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48171,7 +48172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868385139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 43.1, y: 25.16, z: 0.10546388}
+  m_LocalPosition: {x: -21.38, y: -2.83, z: 0.10546388}
   m_LocalScale: {x: 0.31948, y: 0.31948, z: 1.5974}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class ArcadeMachineScript : MonoBehaviour
     public string SceneName;
     private bool _isTalkable;
 
+    public bool CanBeInteracted = false;
+
     private bool _isFinished;
 
     private void Start()
@@ -18,7 +21,7 @@ public class ArcadeMachineScript : MonoBehaviour
 
     private void Update()
     {
-        if (_isTalkable && Input.GetKeyDown(KeyCode.E) && !_isFinished)
+        if (_isTalkable && Input.GetKeyDown(KeyCode.E) && !_isFinished && CanBeInteracted)
         {
             SceneManager.LoadScene(SceneName);
         }
@@ -26,7 +29,7 @@ public class ArcadeMachineScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (_isFinished) return;
+        if (_isFinished || !CanBeInteracted) return;
 
         _isTalkable = true;
         TalkButtonHint.SetActive(true);
@@ -34,6 +37,7 @@ public class ArcadeMachineScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         _isTalkable = false;
         TalkButtonHint.SetActive(false);
     }
