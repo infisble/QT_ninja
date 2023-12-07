@@ -10,6 +10,8 @@ public class DialogManager : MonoBehaviour
 	private GameLogicScript GameLogicScript;
 	private GameObject _options;
 
+    public GameObject SubjectNameBox;
+
 	private List<Image> _selectedPointers = new();
 	private List<Text> _possibleAnswers = new();
 	private JsonReader.Question[] _questions;
@@ -82,7 +84,10 @@ public class DialogManager : MonoBehaviour
 		_textOnlyDialog = false;
 		currentQuestionIdx = 0;
 		_questions = subject.Questions;
-		SelectQuestion(currentQuestionIdx);
+        SubjectNameBox.SetActive(true);
+        var x = GameObject.FindGameObjectWithTag("SubjectNameText");
+        x.GetComponent<Text>().text = subject.Name;
+        SelectQuestion(currentQuestionIdx);
 	}
 	
 	public void StartDialog(string text)
@@ -147,6 +152,7 @@ public class DialogManager : MonoBehaviour
 		{
 			playerScript.CanMove = true;
 			DialogTextBox.SetActive(false);
+            SubjectNameBox.SetActive(false);
 		}
 	}
 
