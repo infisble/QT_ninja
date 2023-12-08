@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,9 @@ public class Janitor : MonoBehaviour
     public DialogManager DialogManager;
     private bool playerIsClose;
     private int missionObjects;
+    private bool mission1Finished = false;
+    private bool mission2Finished = false;
+    private bool mission3Finished = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -67,12 +70,19 @@ public class Janitor : MonoBehaviour
 
     private void Level1Mission()
     {
+        if (mission1Finished)
+        {
+            DialogManager.StartDialog("ƒéakujem za pomoc.");
+            return;
+        }
+
         string textString;
-        textString = $"ZdravÌm. Potreboval by som vaöu pomoc. Som tu nov˝ a predch·dzaj˙ci ökolnÌk" +
-            $" nevr·til veci na miesto. Naöli by ste mi ich prosÌm? Ak ich n·jdete, prÌdte za mnou.";
+        textString = $"Zdrav√≠m. Potreboval by som va≈°u pomoc. Som tu nov√Ω a predch√°dzaj√∫ci ≈°koln√≠k" +
+            $" nevr√°til veci na miesto. Na≈°li by ste mi ich pros√≠m? Ak ich n√°jdete, pr√≠dte za mnou.";
         if (missionObjects == 3)
         {
-            textString = $"œakujem v·m veæmi pekne. Za vaöu pomoc som v·m uû vybavil 10 bodov.";
+            mission1Finished = true;
+            textString = $"√èakujem v√°m ve¬æmi pekne. Za va≈°u pomoc som v√°m u≈æ vybavil 10 bodov.";
             GameLogicScript.Instance.IncrementScore(10);
         }
 
@@ -81,13 +91,19 @@ public class Janitor : MonoBehaviour
 
     private void Level2Mission()
     {
+        if (mission2Finished)
+        {
+            DialogManager.StartDialog("ƒéakujem za pomoc.");
+            return;
+        }
         string textString;
-        textString = $"ZdravÌm. Op‰ù by som potreboval vaöu pomoc. äkola k˙pila automat na k·vu" +
-            $" a teraz s˙ vöade porozhadzovanÈ poh·re. Ja musÌm Ìsù rieöiù nieËo inÈ," +
-            $" tak ak by ste uvideli niekde pohoden˝ poh·r, zahodili by ste ho? PrÌdte za mnou hneÔ ako ich upracete.";
+        textString = $"Zdrav√≠m. Op√§¬ù by som potreboval va≈°u pomoc. ≈†kola k√∫pila automat na k√°vu" +
+            $" a teraz s√∫ v≈°ade porozhadzovan√© poh√°re. Ja mus√≠m √≠s¬ù rie≈°i¬ù nie√®o in√©," +
+            $" tak ak by ste uvideli niekde pohoden√Ω poh√°r, zahodili by ste ho? Pr√≠dte za mnou hne√Ø ako ich upracete.";
         if (missionObjects == 6)
         {
-            textString = $"œakujem v·m veæmi pekne. Za vaöu pomoc som v·m uû vybavil 10 bodov.";
+            mission2Finished = true;
+            textString = $"√èakujem v√°m ve¬æmi pekne. Za va≈°u pomoc som v√°m u≈æ vybavil 10 bodov.";
             GameLogicScript.Instance.IncrementScore(10);
         }
 
@@ -96,15 +112,21 @@ public class Janitor : MonoBehaviour
 
     private void Level3Mission()
     {
+        if (mission3Finished)
+        {
+            DialogManager.StartDialog("ƒéakujem za pomoc.");
+            return;
+        }
         string textString;
-        textString = $"ZdravÌm. Potreboval by som od v·s posledn˙ sluûbu. Ak by ste n·hodou" +
-            $" narazili na pekn˙ v·zu, mohli by ste sa sem okomûite vr·tiù a nahl·siù mi, na ktorom" +
-            $" poschodÌ sa nach·dza?";
+        textString = $"Zdrav√≠m. Potreboval by som od v√°s posledn√∫ slu≈æbu. Ak by ste n√°hodou" +
+            $" narazili na pekn√∫ v√°zu, mohli by ste sa sem okom≈æite vr√°ti¬ù a nahl√°si¬ù mi, na ktorom" +
+            $" poschod√≠ sa nach√°dza?";
         if (missionObjects == 1)
         {
-            textString = $"Som v·m nesmierne vÔaËn˝. Za vaöu pomoc som v·m uû vybavil 10 bodov. KeÔûe toto bola" +
-                $" ûivotu nebezpeËn· ˙loha, poviem v·m tajomstvo. Na 6.poschodÌ væavo v kniûnici n·jdete knihu" +
-                $" so vöetkymi spr·vnymi odpoveÔami.";
+            textString = $"Som v√°m nesmierne v√Øa√®n√Ω. Za va≈°u pomoc som v√°m u≈æ vybavil 10 bodov. Ke√Ø≈æe toto bola" +
+                $" ≈æivotu nebezpe√®n√° √∫loha, poviem v√°m tajomstvo. Na 6.poschod√≠ v¬æavo v kni≈ænici n√°jdete knihu" +
+                $" so v≈°etkymi spr√°vnymi odpove√Øami.";
+            mission3Finished = true;
             GameLogicScript.Instance.IncrementScore(10);
         }
         DialogManager.StartDialog(textString);
