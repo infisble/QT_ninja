@@ -2,6 +2,7 @@
   "Subjects": [
     {
       "Name": "ps",
+      "FullName": "Počítačové siete",
       "Questions": [
         {
           "question": "Predmetom výmeny informácií na vrstve 2 podľa referenčného modelu OSI sú:",
@@ -32,6 +33,7 @@
     },
     {
       "Name": "it",
+      "FullName": "Internetové technológie",
       "Questions": [
         {
           "question": "Akým typom služby je WWW?",
@@ -62,6 +64,7 @@
     },
     {
       "Name": "prog",
+      "FullName": "Programovanie 1",
       "Questions": [
         {
           "question": "Ktorá funkcia sa najčastejšie používa na výpis hodnôt a textu?",
@@ -92,6 +95,7 @@
     },
     {
       "Name": "pit",
+      "FullName": "Pokročilé internetové technológie",
       "Questions": [
         {
           "question": "Čo znamená skratka PHP?",
@@ -122,6 +126,7 @@
     },
     {
       "Name": "mat",
+      "FullName": "Matematika",
       "Questions": [
         {
           "question": "Ktorý matematik navrhol 'imaginárnu jednotku'?",
@@ -152,6 +157,7 @@
     },
     {
       "Name": "dbs",
+      "FullName": "Databázové systémy",
       "Questions": [
         {
           "question": "Príkaz ALTER TABLE table_name RENAME, môže byť použitý na:",
@@ -182,6 +188,7 @@
     },
     {
       "Name": "os",
+      "FullName": "Operačné systémy",
       "Questions": [
         {
           "question": "Pri ktorej fragmentácii je jeden súbor rozmiestnený na veľa miestach pevného disku, ktoré neležia vedľa seba?",
@@ -212,6 +219,7 @@
     },
     {
       "Name": "pg",
+      "FullName": "Počítačová grafika",
       "Questions": [
         {
           "question": "Otazka 1",
@@ -242,6 +250,7 @@
     },
     {
       "Name": "tzi",
+      "FullName": "Teoretické základy informatiky",
       "Questions": [
         {
           "question": "Ako sa nazýva konečná neprázdna množina symbolov?",
@@ -272,6 +281,7 @@
     },
     {
       "Name": "ele",
+      "FullName": "Elektrotechnika a elektronika",
       "Questions": [
         {
           "question": "Čo skúma elektrotechnika?",
@@ -302,6 +312,7 @@
     },
     {
       "Name": "ms",
+      "FullName": "Multimediálne systémy",
       "Questions": [
         {
           "question": "Otazka 1",
@@ -332,6 +343,7 @@
     },
     {
       "Name": "ais",
+      "FullName": "Aplikačné informačné systémy",
       "Questions": [
         {
           "question": "Otazka 1",
@@ -362,6 +374,7 @@
     },
     {
       "Name": "mt",
+      "FullName": "Mobilné technológie",
       "Questions": [
         {
           "question": "Otazka 1",
@@ -392,6 +405,7 @@
     },
     {
       "Name": "swi",
+      "FullName": "Softvérové inžinierstvo",
       "Questions": [
         {
           "question": "Otazka 1",
@@ -422,6 +436,7 @@
     },
     {
       "Name": "ib",
+      "FullName": "Informačná bezpečnosť",
       "Questions": [
         {
           "question": "Steganografia je technika, ktorá:",
