@@ -40,6 +40,10 @@ public class Janitor : MonoBehaviour
             {
                 Level2Mission();
             }
+            if (gameObject.scene.name == "Level3")
+            {
+                Level3Mission();
+            }
         }
     }
 
@@ -90,8 +94,29 @@ public class Janitor : MonoBehaviour
         DialogManager.StartDialog(textString);
     }
 
+    private void Level3Mission()
+    {
+        string textString;
+        textString = $"ZdravÌm. Potreboval by som od v·s posledn˙ sluûbu. Ak by ste n·hodou" +
+            $" narazili na pekn˙ v·zu, mohli by ste sa sem okomûite vr·tiù a nahl·siù mi, na ktorom" +
+            $" poschodÌ sa nach·dza?";
+        if (missionObjects == 1)
+        {
+            textString = $"Som v·m nesmierne vÔaËn˝. Za vaöu pomoc som v·m uû vybavil 10 bodov. KeÔûe toto bola" +
+                $" ûivotu nebezpeËn· ˙loha, poviem v·m tajomstvo. Na 6.poschodÌ væavo v kniûnici n·jdete knihu" +
+                $" so vöetkymi spr·vnymi odpoveÔami.";
+            GameLogicScript.Instance.IncrementScore(10);
+        }
+        DialogManager.StartDialog(textString);
+    }
+
     public void Increment(int val)
     {
         missionObjects += val;
+        if(gameObject.scene.name == "Level3")
+        {
+            missionObjects = val;
+        }
+        Debug.Log(missionObjects);
     }
 }
