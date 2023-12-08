@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8239292188668468250}
   - component: {fileID: 8239292188668468251}
   - component: {fileID: 6624478361562651875}
+  - component: {fileID: 9215321301089313373}
+  - component: {fileID: 7086353282894349135}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Untagged
@@ -111,3 +113,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 4.2}
   m_EdgeRadius: 0
+--- !u!61 &9215321301089313373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239292188668468248}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.14980412, y: 5.4854164}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 4.2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 43.640106, y: 49.566154}
+  m_EdgeRadius: 0
+--- !u!114 &7086353282894349135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239292188668468248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2032c63ec4f89f54394ba0fbf0d58271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
