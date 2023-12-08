@@ -21,6 +21,7 @@ TagManager:
   - Coins
   - ArcadeMachine
   - SubjectNameText
+  - MissionBonus
   layers:
   - Default
   - TransparentFX
