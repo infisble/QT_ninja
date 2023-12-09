@@ -64,7 +64,7 @@
     },
     {
       "Name": "prog",
-      "FullName": "Programovanie 1",
+      "FullName": "Programovanie",
       "Questions": [
         {
           "question": "Ktorá funkcia sa najčastejšie používa na výpis hodnôt a textu?",
@@ -269,7 +269,7 @@
         },
         {
           "question": "Aký je rozdiel nedeterministického konečného automatu oproti deterministickému konečnému automatu?",
-          "options": [ "nemôže viesť prechod z jedného stavu do samého seba", "z jedného stavu musí viesť práve jeden prechod", "z jedného stavu môže viesť ľubovoľný (aj nulový) počet prechodov označených rovnakým symbolom" ],
+          "options": [ "nemôže viesť prechod z jedného stavu do samého seba", "z jedného stavu musí viesť práve jeden prechod", "z jedného stavu môže viesť ľubovoľný počet prechodov označených rovnakým symbolom" ],
           "answer": "2"
         },
         {
@@ -315,29 +315,29 @@
       "FullName": "Multimediálne systémy",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
+          "question": "Ako sa nazýva proces skúmania očnej činnosti?",
+          "options": [ "eye tracking", "vision testing", "eye diagnostics" ],
           "answer": "0"
         },
         {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "K čomu je využívaná MOCAP technológia?",
+          "options": [ "nahrávanie pohybu očí", "nahrávanie pohybu a následná analýza", "nahrávanie pohybu reálneho objektu a jeho prevod na digitálny model" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Údaje o čom získavame prostredníctvom biofeedbacku?",
+          "options": [ "o senzitivite kože", "o činnosti mozgu", "o fyziologických procesoch v tele" ],
+          "answer": "2"
+        },
+        {
+          "question": "Ako rozdeľujeme herné enginy?",
+          "options": [ "podľa pomeru ich používania medzi štúdiami", "podľa ich schopnosti podporovať rôzne platformy", "podľa výkonu" ],
           "answer": "1"
+        },
+        {
+          "question": "Akú techológiu využívame na overovanie činnosti beta vĺn v mozgu?",
+          "options": [ "Elektroencefalografia (EEG)", "Magnetická rezonancia (MRI)", "Elektrokardiografia (EKG)" ],
+          "answer": "0"
         }
       ]
     },
@@ -346,28 +346,28 @@
       "FullName": "Aplikačné informačné systémy",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Ako je riešený HOLAP (hybridný OLAP)?",
+          "options": [ "atomické dáta aj agregačné údaje uložené v relačnej db", "atomické dáta aj agregačné údaje uložené v kockách", "dáta uložené v relačnej databáze, agregácie v kockách" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Dátová pumpa (ETL) je proces:",
+          "options": [ "napĺňania dátového skladu dátami z dátových zdrojov", "napĺňania dátového skladu dátami z OLAP systémov", "napĺňania dátového trhu z dátového skladu" ],
+          "answer": "0"
+        },
+        {
+          "question": "Čo nepatrí do úloh dolovania dát?",
+          "options": [ "určenie resp. predpoklad budúceho chovania dátovej množiny", "popísanie dátovej množiny", "detekcia a odstránenie konfliktov v údajoch" ],
+          "answer": "2"
+        },
+        {
+          "question": "Aké sú etapy pre získavanie znalostí z databáz?",
+          "options": [ "validácia, čistenie, integrácia, derivácia, redukcia, obnova a testovanie", "selekcia, predspracovanie, transformácia, dolovanie dát, interpretácia a predikcia", "selekcia, rozdeľovanie/spájanie, konvrzia, sumarizácia, obohatenie" ],
+          "answer": "1"
+        },
+        {
+          "question": "Ktorý výrok o metadátach dátových skladoch je nepravdivý?",
+          "options": [ "poskytujú informáciu o umiestnení", "vždy sú súčasťou dokumentu", "pomáhajú odfiltrovať nerelevantné informačné zdroje" ],
           "answer": "1"
         }
       ]
@@ -408,29 +408,29 @@
       "FullName": "Softvérové inžinierstvo",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
+          "question": "Softvérové inžinierstvo je o:",
+          "options": [ "rýchlom vývoji, kde testy zaručia kvalitu", "vývoji kvalitného softvéru pri minimalizovaní nákladov", "vývoji kvalitného softvéru, nehľadiac na čas vývoja" ],
           "answer": "1"
         },
         {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Aké sú štyri základné aktivity vývoja softvéru v poradí?",
+          "options": [ "dizajn, implementácia, testovanie, evolúcia", "špecifikácia, dizajn, testovanie, evolúcia", "špecifikácia, vývoj, testovanie, evolúcia" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
-          "answer": "1"
+          "question": "Aké sú výhody znovupoužitia softvéru?",
+          "options": [ "lepšia spravovateľnosť, zvýšená spoľahlivosť, žiadne projektové riziká", "rýchlejší vývoj, lepšia spravovateľnosť, nižšie projektové a procesné riziká", "súlad so štandardami, nižšie náklady, rýchlejší vývoj" ],
+          "answer": "2"
+        },
+        {
+          "question": "Pomocou ktorého UML diagramu sa dajú namodelovať pracovné postupy?",
+          "options": [ "diagram aktivít", "diagram prípadov použitia", "stavový diagram" ],
+          "answer": "0"
+        },
+        {
+          "question": "Pomocou ktorého UML diagramu sa dá namodelovať udalostný systém?",
+          "options": [ "diagram aktivít", "diagram prípadov použitia", "stavový diagram" ],
+          "answer": "2"
         }
       ]
     },
