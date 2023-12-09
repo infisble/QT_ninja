@@ -86,7 +86,7 @@ public class DialogManager : MonoBehaviour
 		_questions = subject.Questions;
         SubjectNameBox.SetActive(true);
         var x = GameObject.FindGameObjectWithTag("SubjectNameText");
-        x.GetComponent<Text>().text = subject.Name;
+        x.GetComponent<Text>().text = subject.FullName;
         SelectQuestion(currentQuestionIdx);
 	}
 	

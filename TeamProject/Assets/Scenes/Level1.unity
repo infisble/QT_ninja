@@ -42569,6 +42569,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 562324539}
   DialogManager: {fileID: 992237803}
+  vase: {fileID: 0}
+  pos: {fileID: 0}
 --- !u!1 &686437958
 GameObject:
   m_ObjectHideFlags: 0
@@ -45316,7 +45318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000026464, y: 0}
+  m_AnchoredPosition: {x: -0.000026464, y: -11}
   m_SizeDelta: {x: 4797.04, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464428462

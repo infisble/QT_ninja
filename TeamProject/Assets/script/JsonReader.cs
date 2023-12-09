@@ -15,6 +15,7 @@ public class JsonReader : MonoBehaviour
 	public class Subject
 	{
 		public string Name;
+        public string FullName;
 		public Question[] Questions;
 	}
 
