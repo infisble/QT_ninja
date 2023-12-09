@@ -15,10 +15,12 @@ public class SceneManagement : MonoBehaviour
         if (male.activeSelf)
         {
             activeObject = male;
+            Debug.Log("Male Active");
         }
         else if (female.activeSelf)
         {
             activeObject = female;
+            Debug.Log("Female Active");
         }
 
         if (activeObject != null)

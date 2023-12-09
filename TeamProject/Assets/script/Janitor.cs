@@ -8,11 +8,14 @@ public class Janitor : MonoBehaviour
     public GameObject TalkButtonHint;
     public DialogManager DialogManager;
     private bool playerIsClose;
+
     private int missionObjects;
     private bool mission1Finished = false;
     private bool mission2Finished = false;
     private bool mission3Finished = false;
-    // Start is called before the first frame update
+
+    public GameObject vase;
+    public GameObject pos;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -82,7 +85,7 @@ public class Janitor : MonoBehaviour
         if (missionObjects == 3)
         {
             mission1Finished = true;
-            textString = $"Ïakujem vám ve¾mi pekne. Za vašu pomoc som vám už vybavil 10 bodov.";
+            textString = $"Ďakujem vám veľmi pekne. Za vašu pomoc som vám už vybavil 10 bodov.";
             GameLogicScript.Instance.IncrementScore(10);
         }
 
@@ -97,13 +100,13 @@ public class Janitor : MonoBehaviour
             return;
         }
         string textString;
-        textString = $"Zdravím. Opä by som potreboval vašu pomoc. Škola kúpila automat na kávu" +
-            $" a teraz sú všade porozhadzované poháre. Ja musím ís rieši nieèo iné," +
-            $" tak ak by ste uvideli niekde pohodený pohár, zahodili by ste ho? Prídte za mnou hneï ako ich upracete.";
+        textString = $"Zdravím. Opäť by som potreboval vašu pomoc. Škola kúpila automat na kávu" +
+            $" a teraz sú všade porozhadzované poháre. Ja musím ísť riešiť niečo iné," +
+            $" tak ak by ste uvideli niekde pohodený pohár, zahodili by ste ho? Prídte za mnou, keď ich upracete.";
         if (missionObjects == 6)
         {
             mission2Finished = true;
-            textString = $"Ïakujem vám ve¾mi pekne. Za vašu pomoc som vám už vybavil 10 bodov.";
+            textString = $"Ďakujem vám veľmi pekne. Za vašu pomoc som vám už vybavil 10 bodov.";
             GameLogicScript.Instance.IncrementScore(10);
         }
 
@@ -119,14 +122,16 @@ public class Janitor : MonoBehaviour
         }
         string textString;
         textString = $"Zdravím. Potreboval by som od vás poslednú službu. Ak by ste náhodou" +
-            $" narazili na peknú vázu, mohli by ste sa sem okomžite vráti a nahlási mi, na ktorom" +
+            $" narazili na peknú vázu, mohli by ste sa sem okamžite vrátiť a nahlásiť mi, na ktorom" +
             $" poschodí sa nachádza?";
         if (missionObjects == 1)
         {
-            textString = $"Som vám nesmierne vïaèný. Za vašu pomoc som vám už vybavil 10 bodov. Keïže toto bola" +
-                $" životu nebezpeèná úloha, poviem vám tajomstvo. Na 6.poschodí v¾avo v knižnici nájdete knihu" +
-                $" so všetkymi správnymi odpoveïami.";
+            textString = $"Som vám nesmierne vďačný. Za vašu pomoc som vám už vybavil 10 bodov. Keďže toto bola" +
+                $" životu nebezpečná úloha, poviem vám tajomstvo. Na 6.poschodí vľavo v knižnici nájdete knihu" +
+                $" so všetkymi správnymi odpoveďami.";
             mission3Finished = true;
+            vase.SetActive(false);
+            pos.SetActive(false);
             GameLogicScript.Instance.IncrementScore(10);
         }
         DialogManager.StartDialog(textString);

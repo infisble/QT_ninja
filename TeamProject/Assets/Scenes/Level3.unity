@@ -823,6 +823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 537432459}
   DialogManager: {fileID: 992237803}
+  vase: {fileID: 1040126203}
+  pos: {fileID: 2124685264}
 --- !u!61 &67159304
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21647,12 +21649,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positions:
-  - {fileID: 1301057244}
-  - {fileID: 386235260}
-  - {fileID: 1802936150}
-  - {fileID: 431317543}
-  - {fileID: 19872714}
-  - {fileID: 720148627}
+  - {fileID: 1301057243}
+  - {fileID: 386235258}
+  - {fileID: 1802936148}
+  - {fileID: 431317541}
+  - {fileID: 19872712}
+  - {fileID: 720148625}
 --- !u!1 &1045378360
 GameObject:
   m_ObjectHideFlags: 0
