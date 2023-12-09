@@ -14,13 +14,11 @@ public class Elevator : MonoBehaviour
     private bool isMoving = false;
     private Vector3 targetPosition;
 
+    public PlayerScript playerMovement;
+
     void Start()
     {
         systemCanvas.SetActive(false);
-        for (int i = 0; i < floorPositions.Length; i++)
-        {
-            Debug.Log(floorPositions[i].position);
-        }
     }
 
     void Update()
@@ -38,6 +36,7 @@ public class Elevator : MonoBehaviour
     private void ShowSystem()
     {
         systemCanvas.SetActive(true);
+        playerMovement.CanMove = false;
     }
 
     public void GoToFloor(int floorIndex)
@@ -53,10 +52,11 @@ public class Elevator : MonoBehaviour
     private void MoveElevator()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-
+        playerMovement.CanMove = false;
         if (transform.position == targetPosition)
         {
             isMoving = false;
+            playerMovement.CanMove = true;
         }
     }
 }

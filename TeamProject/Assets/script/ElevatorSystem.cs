@@ -8,7 +8,6 @@ public class ElevatorSystem : MonoBehaviour
 
     public void OnButtonClick(int floorIndex)
     {
-        Debug.Log(floorIndex);
         elevator.GoToFloor(floorIndex);
     }
 }
