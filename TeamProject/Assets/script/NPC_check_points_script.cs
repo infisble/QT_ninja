@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using static JsonReader;
 
 public class NPC_check_points_script : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class NPC_check_points_script : MonoBehaviour
 	{
 		if (_isTalkable && Input.GetKeyDown(KeyCode.E))
 		{
-			TalkButtonHint.SetActive(false);
+            TalkButtonHint.SetActive(false);
 			int npcsAnswered = GameLogicScript.Instance.CheckNPCS();
 			int score = GameLogicScript.Instance.Score;
 
