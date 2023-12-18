@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterCustomization.unity
     guid: 453ce4e4945c11d4085968a2b7f380d0
-  - enabled: 0
-    path: Assets/Scenes/start_house.unity
-    guid: 7bc24e1caf82688439ac73268be23dd9
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
