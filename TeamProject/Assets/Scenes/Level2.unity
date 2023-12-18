@@ -49571,7 +49571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TalkButtonHint: {fileID: 2135882229}
-  SceneName: minigame
+  SceneName: Minigame2
   CanBeInteracted: 0
 --- !u!61 &1868385141
 BoxCollider2D:

@@ -74,6 +74,7 @@ public class DialogManager : MonoBehaviour
                 if (FinishGame)
                 {
                     FinishGame = false;
+                    GameLogicScript.Instance.Score = 0;
                     SceneManager.LoadScene("Main_Game_Menu");
                 }
 
