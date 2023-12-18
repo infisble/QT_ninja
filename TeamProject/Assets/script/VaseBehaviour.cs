@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VaseBehaviour : MonoBehaviour
 {
+    [SerializeField] private AudioSource collectionSoundEffect;
     bool isNear = false;
     private Transform vase;
     public GameObject[] positions;
@@ -26,6 +27,7 @@ public class VaseBehaviour : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            collectionSoundEffect.Play();
             isNear = true;
             Debug.Log("Vase teleport");
             Teleport();

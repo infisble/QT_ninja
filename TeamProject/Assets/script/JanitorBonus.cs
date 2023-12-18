@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class JanitorBonus : MonoBehaviour
 {
+
+    [SerializeField] private AudioSource collectionSoundEffect;
     bool _isPickable = false;
     // Update is called once per frame
     void Update()
     {
         if (_isPickable && Input.GetKeyDown(KeyCode.E))
         {
+            collectionSoundEffect.Play();
             Janitor.Instance.Increment(1);
             gameObject.SetActive(false);
         }

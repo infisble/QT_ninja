@@ -24820,6 +24820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusBook3
       objectReference: {fileID: 0}
+    - target: {fileID: 3401702636334394030, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
+      propertyPath: collectionSoundEffect
+      value: 
+      objectReference: {fileID: 991107102}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
 --- !u!4 &434202800 stripped
@@ -26076,6 +26080,7 @@ GameObject:
   - component: {fileID: 656979955}
   - component: {fileID: 656979956}
   - component: {fileID: 656979957}
+  - component: {fileID: 656979958}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -26188,6 +26193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2032c63ec4f89f54394ba0fbf0d58271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionSoundEffect: {fileID: 991107102}
 --- !u!61 &656979957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26214,6 +26220,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2, y: 4.4}
   m_EdgeRadius: 0
+--- !u!82 &656979958
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656979952}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.403
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &658758678
 GameObject:
   m_ObjectHideFlags: 0
@@ -43131,6 +43233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2032c63ec4f89f54394ba0fbf0d58271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionSoundEffect: {fileID: 991107102}
 --- !u!61 &795807605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43406,6 +43509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusBook4
       objectReference: {fileID: 0}
+    - target: {fileID: 3401702636334394030, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
+      propertyPath: collectionSoundEffect
+      value: 
+      objectReference: {fileID: 991107102}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
 --- !u!4 &903042648 stripped
@@ -43539,7 +43646,8 @@ GameObject:
   - component: {fileID: 991107098}
   - component: {fileID: 991107099}
   - component: {fileID: 991107100}
-  - component: {fileID: 991107101}
+  - component: {fileID: 991107102}
+  - component: {fileID: 991107103}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -43675,7 +43783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 5
-  jumpSoundEffect: {fileID: 991107101}
+  jumpSoundEffect: {fileID: 991107103}
 --- !u!114 &991107100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43692,7 +43800,103 @@ MonoBehaviour:
   slots:
   - {fileID: 1056904037}
   - {fileID: 2061283683}
---- !u!82 &991107101
+--- !u!82 &991107102
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991107094}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.202
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &991107103
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43703,8 +43907,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_PlayOnAwake: 1
+  m_Volume: 0.07
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -44770,6 +44974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusBook5
       objectReference: {fileID: 0}
+    - target: {fileID: 3401702636334394030, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
+      propertyPath: collectionSoundEffect
+      value: 
+      objectReference: {fileID: 991107102}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
 --- !u!4 &1243919304 stripped
@@ -47125,6 +47333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2032c63ec4f89f54394ba0fbf0d58271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectionSoundEffect: {fileID: 991107102}
 --- !u!61 &1807692401
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47332,6 +47541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusBook2
       objectReference: {fileID: 0}
+    - target: {fileID: 3401702636334394030, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
+      propertyPath: collectionSoundEffect
+      value: 
+      objectReference: {fileID: 991107102}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
 --- !u!4 &1903495354 stripped
@@ -49986,6 +50199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BonusBook1
       objectReference: {fileID: 0}
+    - target: {fileID: 3401702636334394030, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
+      propertyPath: collectionSoundEffect
+      value: 
+      objectReference: {fileID: 991107102}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b8a5b10a5c5ae14bb46ce4cee659cf2, type: 3}
 --- !u!1001 &1628047420523477872
