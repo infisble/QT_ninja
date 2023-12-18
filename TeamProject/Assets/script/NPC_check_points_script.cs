@@ -45,7 +45,7 @@ public class NPC_check_points_script : MonoBehaviour
                 if (gameObject.scene.name == "Level3")
                 {
                     // Succesfully finished last level
-                    questionString = $"Gratulujem vám. Dokončili ste bakalárske štúdium.\nLevel1 : {PlayerPrefs.GetInt("Level1")}/100\nLevel2 : {PlayerPrefs.GetInt("Level2")}/100\nLevel3 : {GameLogicScript.Instance.Score}/100";
+                    questionString = $"Gratulujem vám. Dokončili ste bakalárske štúdium.\n1.ročník : {PlayerPrefs.GetInt("Level1")}/100\n2.ročník : {PlayerPrefs.GetInt("Level2")}/100\n3.ročník : {GameLogicScript.Instance.Score}/100";
                     DialogManager.FinishGame = true;
                 } else
                 {
