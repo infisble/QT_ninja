@@ -16,7 +16,7 @@ public class eettt : MonoBehaviour
     private void Start()
     {
         // Set the initial sprite based on the saved path.
-		img.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString(spriteKey));
+		//img.sprite = Resources.Load<Sprite>(PlayerPrefs.GetString(spriteKey));
 	}
 
     public void ChangeSpriteBlue()

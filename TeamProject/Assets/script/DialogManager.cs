@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
@@ -26,6 +27,9 @@ public class DialogManager : MonoBehaviour
 	private bool _textOnlyDialog = false;
 
 	public bool LevelAdvancementCheck = false;
+
+    [NonSerialized]
+    public bool FinishGame = false;
 
 	// Start is called before the first frame update
 	void Start()
@@ -67,6 +71,12 @@ public class DialogManager : MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
 			{
+                if (FinishGame)
+                {
+                    FinishGame = false;
+                    SceneManager.LoadScene("Main_Game_Menu");
+                }
+
 				SetTalkingState(false);
 				if (LevelAdvancementCheck)
 				{
