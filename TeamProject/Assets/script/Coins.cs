@@ -25,6 +25,7 @@ public class Coins : MonoBehaviour
             Destroy(gameObject);
  if (MoneyText.Coin == 10)
         {
+            GameLogicScript.Instance.Score = 10;
             SceneManager.LoadScene("Level3");
         }
            

@@ -71,7 +71,8 @@ public class PlayerScript : MonoBehaviour
 			{
 				if (_isGrounded)
 				{
-					jumpSoundEffect.Play();
+                    if (jumpSoundEffect != null)
+					    jumpSoundEffect.Play();
 					GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
 					_isGrounded = false;
 				}
