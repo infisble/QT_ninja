@@ -42,8 +42,9 @@ Projekt je dostupný ako public repozitár na [linku](https://github.com/infisbl
 
 ## Odkazy
 
-- [Web stránka projektu](https://student.fpvucm.sk/~jozefmurar/tp/)
-- [Web stránka progresu na projekte](https://student.fpvucm.sk/~dominiksmidak/)
+-  [Hra](https://smidiboi.itch.io/upti-in-pixels)
+-  [Web stránka projektu](https://student.fpvucm.sk/~jozefmurar/tp/)
+-  [Web stránka progresu na projekte](https://student.fpvucm.sk/~dominiksmidak/)
 
 ## Vypracovali
 
