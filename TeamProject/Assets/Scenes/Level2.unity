@@ -45775,6 +45775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 5
+  jumpSoundEffect: {fileID: 0}
 --- !u!114 &991107100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48557,7 +48558,8 @@ MonoBehaviour:
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
   EnableGreeting: 1
-  GreetingText: uvitanie lvl2
+  GreetingText: "Dobr\xFD de\u0148. Vitajte v druhom ro\u010Dn\xEDku. Profesorov,
+    ktor\xED v\xE1s otestuj\xFA, n\xE1jdete na 3. a 4. poschod\xED. Ve\u013Ea \u0161\u0165astia."
 --- !u!95 &1687162924
 Animator:
   serializedVersion: 5

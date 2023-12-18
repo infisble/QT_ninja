@@ -35,9 +35,9 @@ public class NPC_check_points_script : MonoBehaviour
 
 			if (npcsAnswered < 5)
 			{
-				questionString = $"Zodpovedal si {GameLogicScript.Instance.CheckNPCS() * 5}/25 otazok. Zatiaľ si získal {score}/100 bodov.\n" +
-					"Dokonči všetky otázky a potom sa vráť!.\n" +
-					"Stlač <medzerník> pre pokračovanie";
+				questionString = $"Zodpovedali ste {GameLogicScript.Instance.CheckNPCS() * 5}/25 otázok. Zatiaľ ste získali {score}/100 bodov.\n" +
+					"Dokončite všetky otázky a potom sa vráťte!.\n" +
+					"Stlačte <medzerník> pre pokračovanie";
 			}
 			else
 			if (score >= 56)
@@ -45,11 +45,11 @@ public class NPC_check_points_script : MonoBehaviour
                 if (gameObject.scene.name == "Level3")
                 {
                     // Succesfully finished last level
-                    questionString = $"Gratulujem dokoncil si hru.\nLevel1 : {PlayerPrefs.GetInt("Level1")}/100\nLevel2 : {PlayerPrefs.GetInt("Level2")}/100\nLevel3 : {GameLogicScript.Instance.Score}/100";
+                    questionString = $"Gratulujem vám. Dokončili ste bakalárske štúdium.\nLevel1 : {PlayerPrefs.GetInt("Level1")}/100\nLevel2 : {PlayerPrefs.GetInt("Level2")}/100\nLevel3 : {GameLogicScript.Instance.Score}/100";
                 } else
                 {
-                    questionString = $"Zodpovedal si všetky otázky. Získal si {score}/100 bodov. To je dostatok pre postup do ďalšej úrovne!\n" +
-                                    "Pre postup do ďalšej úrovne si zahraj automat.";
+                    questionString = $"Zodpovedali ste všetky otázky. Získali ste {score}/100 bodov. To je dostatok pre postup do ďalšieho ročníka!\n" +
+                                    "Pre postup do ďalšieho ročníka si zahrajte automat.";
                     var machine = GameObject.FindGameObjectWithTag("ArcadeMachine");
                     if (machine is not null)
                     {
@@ -60,8 +60,8 @@ public class NPC_check_points_script : MonoBehaviour
             }
             else
 			{
-				questionString = $"Máš {score}/100 bodov. To je málo pre postup do ďaľšej úrovne. Budeš to musieť skúsiť znova!\n" +
-								 "Stlač <medzerník> pre reštartovanie";
+				questionString = $"Máte {score}/100 bodov. To je málo pre postup do ďalšieho ročníka. Budete to musieť skúsiť znova!\n" +
+								 "Stlačte <medzerník> pre reštartovanie";
 			}
 
 			DialogManager.StartDialog(questionString);

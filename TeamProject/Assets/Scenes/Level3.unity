@@ -49577,7 +49577,8 @@ MonoBehaviour:
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
   EnableGreeting: 1
-  GreetingText: uvitanie lvl3
+  GreetingText: "Dobr\xFD de\u0148. Vitajte v tre\u0165om ro\u010Dn\xEDku. Profesorov,
+    ktor\xED v\xE1s otestuj\xFA, n\xE1jdete na 5. a 6. poschod\xED. Ve\u013Ea \u0161\u0165astia."
 --- !u!95 &1687162924
 Animator:
   serializedVersion: 5

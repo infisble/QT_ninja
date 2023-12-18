@@ -46337,7 +46337,11 @@ MonoBehaviour:
   TalkButtonHint: {fileID: 488488782}
   DialogManager: {fileID: 992237803}
   EnableGreeting: 1
-  GreetingText: uvitanie lvl1
+  GreetingText: "Dobr\xFD de\u0148. Vitajte v prvom ro\u010Dn\xEDku na Univerzite
+    sv. Cyrila a Metoda. Nach\xE1dzate sa na \xDAstave po\u010D\xEDta\u010Dov\xFDch
+    technol\xF3gi\xED a informatiky, kde budete \u0161tudova\u0165 odbor Aplikovan\xE1
+    informatika. Profesorov, ktor\xED v\xE1s otestuj\xFA, n\xE1jdete na 1. a 2. poschod\xED.
+    Ve\u013Ea \u0161\u0165astia."
 --- !u!95 &1687162924
 Animator:
   serializedVersion: 5
