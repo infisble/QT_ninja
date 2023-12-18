@@ -6,6 +6,7 @@ public class ScrollScript : MonoBehaviour
 {
     ScrollLogicScript scr;
 
+    [SerializeField] private AudioSource collectionSoundEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,6 @@ public class ScrollScript : MonoBehaviour
         GameLogicScript.Instance.Score += 2;
         gameObject.SetActive(false);
         scr.ScrollCount++;
+        collectionSoundEffect.Play();
     }
 }

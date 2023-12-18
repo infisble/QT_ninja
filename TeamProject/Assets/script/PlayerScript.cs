@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
 			}
 		}
 	}
-
+	[SerializeField] private AudioSource jumpSoundEffect;
 	private void Start()
 	{
 		//
@@ -71,6 +71,7 @@ public class PlayerScript : MonoBehaviour
 			{
 				if (_isGrounded)
 				{
+					jumpSoundEffect.Play();
 					GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
 					_isGrounded = false;
 				}
