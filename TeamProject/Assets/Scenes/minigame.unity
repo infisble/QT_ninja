@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &212123384
 RectTransform:
   m_ObjectHideFlags: 0
@@ -314,9 +314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToSpawn:
   - {fileID: 8789470314330296745, guid: 295447ed7922a6d41b0bfb08cdd9133a, type: 3}
-  - {fileID: 8789470314330296745, guid: 295447ed7922a6d41b0bfb08cdd9133a, type: 3}
-  - {fileID: 8789470314330296745, guid: 295447ed7922a6d41b0bfb08cdd9133a, type: 3}
-  - {fileID: 8789470314330296745, guid: 295447ed7922a6d41b0bfb08cdd9133a, type: 3}
+  - {fileID: 4577588593018900971, guid: 54d7384aaa29ac24e9817af6cb84e295, type: 3}
+  - {fileID: 1547746550444474438, guid: 421609c9cf4c34742a2457669da9bad3, type: 3}
+  - {fileID: 7978145757260384394, guid: 88cb44db144563d438715de33e652944, type: 3}
   spawnRate: 1
 --- !u!1 &258551716
 GameObject:
