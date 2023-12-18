@@ -222,29 +222,29 @@
       "FullName": "Počítačová grafika",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
+          "question": "Aký farebný model používajú tlačiarne?",
+          "options": [ "CMYK", "RGB", "HSV" ],
           "answer": "0"
         },
         {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Na aké skupiny sa delí 2D grafika?",
+          "options": [ "horizontálna a vertikálna", "rovinová a priestorová", "rastrová a vektorová" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Čo udáva hodnota alfa kanálu?",
+          "options": [ "sýtosť", "priehľadnosť", "farbu" ],
           "answer": "1"
+        },
+        {
+          "question": "V ktorej z možností sú vymenované všetky transformácie v rastrovej grafike?",
+          "options": [ "posuv, zrkadlenie, zmena mierky, skosenie, rotácia", "posuv, zrkadlenie, deformácia, skosenie, rotácia", "posuv, otočenie, deformácia, zmena mierky, skosenie" ],
+          "answer": "0"
+        },
+        {
+          "question": "Aké je nesprávne tvrdenie o vektorovej grafike?",
+          "options": [ "úpravy sú bez zníženia kvality", "s každým objektom sa dá pracovať samostatne", "väčšia výsledná veľkosť súboru" ],
+          "answer": "2"
         }
       ]
     },
@@ -377,28 +377,28 @@
       "FullName": "Mobilné technológie",
       "Questions": [
         {
-          "question": "Otazka 1",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 2",
-          "options": [ "r", "w", "w" ],
-          "answer": "0"
-        },
-        {
-          "question": "Otazka 3",
-          "options": [ "w", "r", "r" ],
-          "answer": "1"
-        },
-        {
-          "question": "Otazka 4",
-          "options": [ "w", "w", "r" ],
+          "question": "Zkratka pre prístupový bod ku bezdrôtovému pripojeniu sa nazýva:",
+          "options": [ "Bluetooth", "Infraport", "Hotspot" ],
           "answer": "2"
         },
         {
-          "question": "Otazka 5",
-          "options": [ "w", "r", "w" ],
+          "question": "Ako sa volá zariadenie, ktoré umožňuje prijímať krátke textové správy?",
+          "options": [ "Pager", "PDA", "Messenger" ],
+          "answer": "0"
+        },
+        {
+          "question": "Ktorá zo skratiek označuje najrýchlejší mobilný internet?",
+          "options": [ "LTE", "4K", "5G" ],
+          "answer": "2"
+        },
+        {
+          "question": "GPRS slúži na:",
+          "options": [ "správu mobilných dát", "pripojenie k sieti 2G", "pripojenie k sieti Wi-Fi" ],
+          "answer": "1"
+        },
+        {
+          "question": "V ktorej z možností, umožňujú všetky aplikácie prenos videohovorov?",
+          "options": [ "Shazam, WhatsApp, Messenger", "FaceTime, Messenger, WhatsApp", "FaceTime, Messenger, Shazam" ],
           "answer": "1"
         }
       ]
