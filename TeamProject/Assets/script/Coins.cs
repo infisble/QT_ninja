@@ -25,7 +25,7 @@ public class Coins : MonoBehaviour
             Destroy(gameObject);
  if (MoneyText.Coin == 10)
         {
-            SceneManager.LoadScene("Start_house");
+            SceneManager.LoadScene("Level3");
         }
            
         }

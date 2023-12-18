@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class RandomSpawn : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obj;
+    private List<GameObject> objectsToSpawn; // Змінено на List для приймання декількох об'єктів
     float RandX;
     Vector2 whereToSpawn;
     [SerializeField]
@@ -23,14 +23,17 @@ public class RandomSpawn : MonoBehaviour
                 nextSpawn = Time.time + spawnRate;
                 RandX = Random.Range(-9f, 9f);
                 whereToSpawn = new Vector2(RandX, transform.position.y);
-                Instantiate(obj, whereToSpawn, Quaternion.identity);
+
+                // Вибрати випадковий об'єкт для спавну зі списку
+                GameObject objectToSpawn = objectsToSpawn[Random.Range(0, objectsToSpawn.Count)];
+
+                Instantiate(objectToSpawn, whereToSpawn, Quaternion.identity);
             }
 
             timeElapsed += Time.deltaTime;
         }
         else
         {
-           
             SceneManager.LoadScene("Start_house");
         }
     }
